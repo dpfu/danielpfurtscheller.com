@@ -7,9 +7,9 @@ google_fonts = "Crete+Round"
 # Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono"
 
 # Font families
-heading_font = "Crete+Round"
-body_font = "Crete+Round"
-nav_font = "Crete+Round"
+heading_font = "Crete Round"
+body_font = "Crete Round"
+nav_font = "Crete Round"
 mono_font = "monospaced"
 
 # Font size
