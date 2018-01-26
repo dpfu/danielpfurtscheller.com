@@ -28,6 +28,6 @@ weight = 5
  
 +++
 
-# Biography
+# Hi!
 
-Daniel Pfurtscheller is a researcher at the University of Innsbruck. His research interests include media linguistics, news language, multimodality, and visual communication. 
+I am researcher at the University of Innsbruck interested in media linguistics, multimodality, news language and visual communication.
