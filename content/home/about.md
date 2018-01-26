@@ -10,9 +10,10 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Media language",
+    "Media speech",
     "Multimodality",
-    "Visual Communication"
+    "Language of News Media",
+    "Computer-Mediated Communication"
   ]
 
 # List your qualifications (such as academic degrees).
