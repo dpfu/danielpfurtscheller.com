@@ -22,7 +22,7 @@ weight = 5
   year = 2015
 
 [[education.courses]]
-  course = "Mag. phil. in Germanic philology"
+  course = "Mag. phil. in German Philology"
   institution = "University of Innsbruck"
   year = 2011
  
