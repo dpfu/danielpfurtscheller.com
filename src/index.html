@@ -54,24 +54,34 @@
       text-decoration: underline;
     }
 
-    /* Tooltips (simple title-based) on hover for demonstration */
-    [data-tooltip] {
+    /* Improved, animated, and tilted tooltip */
+    .publication-card[data-tooltip] {
       position: relative;
-      cursor: help;
+      cursor: pointer;
     }
-    [data-tooltip]:hover::after {
+
+    .publication-card[data-tooltip]::after {
       content: attr(data-tooltip);
       position: absolute;
-      top: 110%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--text-color);
+      top: -10px;
+      right: -10px;
+      background-color: #007acc;
       color: #fff;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
       white-space: nowrap;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      transform: rotate(-5deg) translateY(-20px);
+      opacity: 0;
       pointer-events: none;
+      transition: all 0.3s ease-in-out;
+      z-index: 10;
+    }
+
+    .publication-card[data-tooltip]:hover::after {
+      transform: rotate(5deg) translateY(0);
+      opacity: 1;
     }
 
     /* -----------------------------------------------------------
@@ -249,36 +259,33 @@
       Die beste Art mich zu erreichen: Schreib mir ein E-Mail :)
     </p>
 
-<ul class="contact-list">
-  <li>
-    <!-- Email Icon -->
-<svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"/></svg>
-    </svg>
-    <a href="mailto:daniel.pfurtscheller@uibk.ac.at">E-Mail</a>
-  </li>
-  <li>
-    <!-- Bluesky Icon -->
-<svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bluesky</title><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
-    <a href="https://bsky.app/profile/dpfu.bsky.social">Bluesky</span>
-  </li>
-  <li>
-    <!-- ORCID Icon -->
-<svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ORCID</title><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
-    <a href="https://orcid.org/0000-0002-4769-6223" target="_blank">ORCID Profile</a>
-  </li>
-  <li>
-
-
-    <!-- Google Scholar Icon -->
-    <svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Scholar</title><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-    <a href="https://scholar.google.com/citations?user=w57GGLEAAAAJ" target="_blank">Google Scholar</a>
-  </li>
-  <li>
-    <!-- ResearchGate Icon -->
-<svg class="contact-icon"role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ResearchGate</title><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></svg>
-    <a href="https://www.researchgate.net/profile/Daniel-Pfurtscheller" target="_blank">ResearchGate</a>
-  </li>
-</ul>
+    <ul class="contact-list">
+      <li>
+        <!-- Email Icon -->
+        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"/></svg>
+        <a href="mailto:daniel.pfurtscheller@uibk.ac.at">E-Mail</a>
+      </li>
+      <li>
+        <!-- Bluesky Icon -->
+        <svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bluesky</title><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+        <a href="https://bsky.app/profile/dpfu.bsky.social">Bluesky</a>
+      </li>
+      <li>
+        <!-- ORCID Icon -->
+        <svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ORCID</title><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+        <a href="https://orcid.org/0000-0002-4769-6223" target="_blank">ORCID Profile</a>
+      </li>
+      <li>
+        <!-- Google Scholar Icon -->
+        <svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Scholar</title><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        <a href="https://scholar.google.com/citations?user=w57GGLEAAAAJ" target="_blank">Google Scholar</a>
+      </li>
+      <li>
+        <!-- ResearchGate Icon -->
+        <svg class="contact-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ResearchGate</title><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></svg>
+        <a href="https://www.researchgate.net/profile/Daniel-Pfurtscheller" target="_blank">ResearchGate</a>
+      </li>
+    </ul>
 
   </section>
 
@@ -319,8 +326,7 @@
       <!-- Herausgeberschaften -->
       <h3>Herausgeberschaften</h3>
       <div class="publication-list">
-        <div class="publication-card open-access" data-link="https://wlg.univie.ac.at/aktuelle-ausgabe/abstracts-ausgabe-902021" 
-             data-tooltip="open access">
+        <div class="publication-card open-access" data-link="https://wlg.univie.ac.at/aktuelle-ausgabe/abstracts-ausgabe-902021" data-tooltip="open access">
           <h4>Corona-Diskurse in und über Österreich (2021)</h4>
           <p>Bülow, Lars, Anne Diehr, Daniel Pfurtscheller &amp; Sebastian Thome (2021). <em>Corona-Diskurse in und über Österreich.</em> Themenheft Wiener Linguistische Gazette, Heft 90 / 2021. 
             <a href="https://wlg.univie.ac.at/aktuelle-ausgabe/abstracts-ausgabe-902021" target="_blank">Open Access</a>
@@ -330,13 +336,13 @@
           <h4>Schneller, bunter, leichter (2018)</h4>
           <p>Blasch, Lisa / Pfurtscheller, Daniel / Schröder, Thomas (2018): <em>Schneller, bunter, leichter. Kommunikationsstile im medialen Wandel.</em> Innsbruck: innsbruck university press (IUP).</p>
         </div>
-        <div class="publication-card" data-link="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-385" >
+        <div class="publication-card open-access" data-link="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-385" data-tooltip="open access">
           <h4>Datenflut und Informationskanäle (2014)</h4>
           <p>Ortner, Heike / Pfurtscheller, Daniel / Rizzolli, Michaela / Wiesinger, Andreas (2014): <em>Datenflut und Informationskanäle.</em> Innsbruck: innsbruck university press (IUP). 
             <a href="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-385" target="_blank">Open Access</a>
           </p>
         </div>
-        <div class="publication-card" data-link="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429">
+        <div class="publication-card open-access" data-link="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429" data-tooltip="open access">
           <h4>Medienräume: Regionalität und Materialität (2013)</h4>
           <p>Dander, Valentin / Gründhammer, Veronika / Ortner, Heike / Pfurtscheller, Daniel / Rizzolli, Michaela (2013): <em>Medienräume: Regionalität und Materialität.</em> Innsbruck: innsbruck university press (IUP). 
             <a href="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429" target="_blank">Open Access</a>
@@ -347,15 +353,19 @@
       <!-- Aufsätze in Zeitschriften und Sammelbänden -->
       <h3>Aufsätze in Zeitschriften und Sammelbänden</h3>
       <div class="publication-list">
+        <div class="publication-card open-access" data-link="https://doi.org/10.5771/0010-3497-2024-4-465">
+          <h4>Bildethik praktisch (2024)</h4>
+          <p>Christ, Katharina; Lobinger, Katharina; Pfurtscheller, Daniel; Venema, Rebecca (2024): Bildethik praktisch. Verantwortungsvoller Umgang mit personenbezogenem Bildmaterial in der Wissenschaftskommunikation. <em>Communicatio Socialis 57(4)</em>, 465–477. DOI: 10.5771/0010-3497-2024-4-465 (Open Access)</p>
+        </div>
         <div class="publication-card" data-link="https://benjamins.com/catalog/pbns.348.06pfu">
-  <h4>Media as cookie cutters (2024)</h4>
-  <p>Pfurtscheller, Daniel (2024): Media as cookie cutters: Exploring the digital mediality of news on Instagram. In Martin Luginbühl & Jan Georg Schneider (Eds.), <em>Media as Procedures of Communication</em> (Pragmatics &amp; Beyond New Series 348), 124–155. DOI: 10.1075/pbns.348.06pfu</p>
-</div>
-        <div class="publication-card" data-link="https://doi.org/10.1515/zgl-2024-2005">
+          <h4>Media as cookie cutters (2024)</h4>
+          <p>Pfurtscheller, Daniel (2024): Media as cookie cutters: Exploring the digital mediality of news on Instagram. In Martin Luginbühl & Jan Georg Schneider (Eds.), <em>Media as Procedures of Communication</em> (Pragmatics &amp; Beyond New Series 348), 124–155. DOI: 10.1075/pbns.348.06pfu</p>
+        </div>
+        <div class="publication-card open-access" data-link="https://doi.org/10.1515/zgl-2024-2005" data-tooltip="open access">
           <h4>Digitale Live-Öffentlichkeiten (2024)</h4>
           <p>Pfurtscheller, Daniel (2024): Digitale Live-Öffentlichkeiten: Eine medienlinguistische Analyse von parlamentarischen Live-Tickern auf DerStandard.at. <em>Zeitschrift für germanistische Linguistik 52(1)</em>, 95–123. DOI: 10.1515/zgl-2024-2005 (Open Access)</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.48694/KORDAF.3864">
+        <div class="publication-card open-access" data-link="https://doi.org/10.48694/KORDAF.3864" data-tooltip="open access">
           <h4>Vom Fundus zum Korpus (2023)</h4>
           <p>Pfurtscheller, Daniel (2023). Vom Fundus zum Korpus. Reddit als Medium und digitale Sprachressource. In: <em>Korpora Deutsch als Fremdsprache 3(2)</em>, 137–159. DOI: 10.48694/KORDAF.3864 (Open Access)</p>
         </div>
@@ -363,7 +373,7 @@
           <h4>Zitieren via Screenshot (2023)</h4>
           <p>Pfurtscheller, Daniel (2023). Zitieren via Screenshot. Digitale Pragmatik und Medialität bildbasierter Zitierpraktiken. In Simon Meier-Vieracker, Lars Bülow, Konstanze Marx &amp; Robert Mroczynski (Hg.), <em>Digitale Pragmatik</em>, 109–126. Berlin, Heidelberg: Springer.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.3389/fcomm.2022.1059131">
+        <div class="publication-card open-access" data-link="https://doi.org/10.3389/fcomm.2022.1059131" data-tooltip="open access">
           <h4>From private phones to public screens (2022)</h4>
           <p>Pfurtscheller, Daniel (2022). From private phones to public screens: Cross-media recontextualization of chat discourse in the case of the Austrian ÖVP corruption affair. In: <em>Frontiers in Communication 7</em>. DOI: 10.3389/fcomm.2022.1059131 (Open Access)</p>
         </div>
@@ -371,24 +381,20 @@
           <h4>Swipe Up! (2022)</h4>
           <p>Pfurtscheller, Daniel (2022). Swipe Up! Multimodale Nachrichtenpräsentation in journalistischen Instagram-Storys. In: Ulla Autenrieth &amp; Cornelia Brantner (Hg.): <em>It’s All About Video. Visuelle Kommunikation im Bann bewegter Bilder.</em> Köln: Halem, 208-228.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.1007/978-3-662-64597-0_7">
+        <div class="publication-card">
           <h4>„Klasse Greta gut gekontert“ (2022)</h4>
           <p>Pfurtscheller, Daniel (2022). „Klasse Greta gut gekontert“. Reflexive Zitierpraktiken und Rekontextualisierung von ‚schlagfertiger‘ Social-Media-Interaktion. In: Florian Busch, Pepe Droste &amp; Elisa Wessels, (Hg.): <em>Sprachreflexive Praktiken</em>, 153–176. Berlin, Heidelberg: Springer.</p>
         </div>
-        <div class="publication-card">
+        <div class="publication-card open-access" data-link="https://diglib.uibk.ac.at/urn/urn:nbn:at:at-ubi:3-32706" data-tooltip="open access">
           <h4>Nachrichtenfans (2022)</h4>
           <p>Pfurtscheller, Daniel (2022). Nachrichtenfans. Fankommunikation in der interaktiven Nachbearbeitung von österreichischen Fernsehnachrichten auf Twitter. In: Stefan Hauser &amp; Simon Meier-Vieracker (Hg.): 
             <em>Fankulturen und Fankommunikation</em>, 51-77. Open Access.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.24053/9783823394693">
-          <h4>Medienlinguistisch transkribieren (2022)</h4>
-          <p>Pfurtscheller, Daniel (2022): Medienlinguistisch transkribieren. Transkriptions- und Annotationspraktiken in der qualitativen Forschung zu digitaler Medienkommunikation. In: Schwarze, Cordula/Grawunder, Sven (Hg.): <em>Transkription und Annotation gesprochener Sprache</em>. Tübingen: Narr, 186-210.</p>
-        </div>
-        <div class="publication-card" data-link="https://doi.org/10.1007/s41244-021-00199-y">
+        <div class="publication-card open-access" data-link="https://doi.org/10.1007/s41244-021-00199-y" data-tooltip="open access">
           <h4>»Ich bin seit Montag Zuhause in Quarantäne« (2021)</h4>
           <p>Michel, Sascha / Pfurtscheller, Daniel (2021): »Ich bin seit Montag Zuhause in Quarantäne« – Zur Verbindung von Erzählen und Argumentieren in Social-Media-Kommentaren zu politischen Reden. In: <em>Zeitschrift für Literaturwissenschaft und Linguistik 51.2021</em>, 255–279. DOI: 10.1007/s41244-021-00199-y (Open Access)</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.1075/aila.00037.pfu">
+        <div class="publication-card open-access" data-link="https://doi.org/10.1075/aila.00037.pfu" data-tooltip="open access">
           <h4>More than recycled snippets of news (2020)</h4>
           <p>Pfurtscheller, Daniel (2020): More than recycled snippets of news. Quote cards as recontextualized discourse on social media. In: <em>AILA Review 33.2020</em>, 203-225. DOI: 10.1075/aila.00037.pfu (Open Access)</p>
         </div>
@@ -400,7 +406,7 @@
           <h4>Doing visual analysis online (2020)</h4>
           <p>Venema, Rebecca / Pfurtscheller, Daniel / Lobinger, Katharina (2020): Doing visual analysis online. Forschungsethische Herausforderungen und Handlungsempfehlungen zur Analyse vernetzter Bilder. In: Brantner, Cornelia / Götzenbrucker, Gerit / Lobinger, Katharina / Schreiber, Maria (Hg.): <em>Vernetzte Bilder. Visuelle Kommunikation in Sozialen Medien.</em> Berlin: von Halem, 288–310.</p>
         </div>
-        <div class="publication-card">
+        <div class="publication-card" data-tooltip="open access">
           <h4>Alltägliche Medienkritik in der Social-Media-Interaktion auf Facebook (2020)</h4>
           <p>Pfurtscheller, Daniel (2020): Alltägliche Medienkritik in der Social-Media-Interaktion auf Facebook. Zur Rekonstruktion medienkritischer Praktiken am Beispiel des Facebook-Accounts von Zeit im Bild (ZIB). In: Hans-Jürgen Bucher (Hg.): <em>Medienkritik</em>. Berlin: von Halem, 252-273.</p>
         </div>
@@ -412,7 +418,7 @@
           <h4>Politik im Spot(t)-Format (2019)</h4>
           <p>Brantner, Cornelia / Lobinger, Katharina / Pfurtscheller, Daniel (2019): Politik im Spot(t)-Format: Humor im österreichischen Wahlkampf 2017. In: Schicha, Christian (Hg.): <em>Wahlwerbespots 2017.</em> Wiesbaden: VS, 509-588.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.3726/JA512_45">
+        <div class="publication-card open-access" data-link="https://doi.org/10.3726/JA512_45" data-tooltip="open access">
           <h4>Der rote Rahmen (2019)</h4>
           <p>Pfurtscheller, Daniel (2019): Der rote Rahmen. Beobachtungen zur Medienkultur des Nachrichtenmagazins entlang eines visuellen Musterhinweises. In: <em>Jahrbuch für Internationale Germanistik 51.2</em>, 45-62. DOI: 10.3726/JA512_45 (Open Access)</p>
         </div>
@@ -428,21 +434,13 @@
           <h4>40 Jahre „1, 2 oder 3“ (2018)</h4>
           <p>Pfurtscheller, Daniel (2018): 40 Jahre „1, 2 oder 3“. Zum medialen Wandel eines Langzeitformats der nicht-fiktionalen Fernsehunterhaltung für Kinder. In: Lisa Blasch, Daniel Pfurtscheller, Thomas Schröder (Hg.): <em>Schneller, bunter, leichter?</em> Innsbruck: innsbruck university press, 129–146.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.19195/0137-1169.35.3">
+        <div class="publication-card open-access" data-link="https://doi.org/10.19195/0137-1169.35.3" data-tooltip="open access">
           <h4>Persuasives Handeln: objektbezogen, multimodal, massenmedial (2016)</h4>
           <p>Pfurtscheller, Daniel (2016): Persuasives Handeln: objektbezogen, multimodal, massenmedial. Gebrauch der „Taferln“ in österreichischen TV-Wahldebatten. In: <em>Acta Universitatis Wratislaviensis. Studia Linguistica 35</em>, 37–66. DOI: 10.19195/0137-1169.35.3 (Open Access)</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.5281/zenodo.1406129">
+        <div class="publication-card open-access" data-link="https://doi.org/10.5281/zenodo.1406129" data-tooltip="open access">
           <h4>Wenn Nachrichtenmagazine Ebola erklären (2016)</h4>
           <p>Pfurtscheller, Daniel (2016): Wenn Nachrichtenmagazine Ebola erklären und Viren visualisieren. Multimodale Wissensformate am Beispiel der Ebola-Berichterstattung 2014. In: Sabban, Annette / Jaki, Sylvia (Hg.): <em>Wissensformate in den Medien.</em> Berlin: Frank &amp; Timme, 77-100. DOI: 10.5281/zenodo.1406129 (Open Access)</p>
-        </div>
-        <div class="publication-card" data-link="https://doi.org/10.14361/9783839436592-004">
-          <h4>Verteiltes Zeigen (2016)</h4>
-          <p>Pfurtscheller, Daniel (2016): Verteiltes Zeigen. Multimodalität in Illustrierten Zeitschriften um 1900 am Beispiel serieller Bildverwendung in der populären Wochenzeitschrift „Das interessante Blatt“. In: Igl, Natalia / Menzel, Julia (Hg.): <em>Illustrierte Zeitschriften um 1900.</em> Bielefeld: transcript, 75–105.</p>
-        </div>
-        <div class="publication-card" data-link="https://doi.org/10.5281/zenodo.1182565">
-          <h4>Scherzen mit Bild und Text (2016)</h4>
-          <p>Pfurtscheller, Daniel (2016): Scherzen mit Bild und Text. Medienbilder und Mediendesign in komischen Verwendungszusammenhängen. In: Amann, Klaus / Hackl, Wolfgang (Hg.): <em>Satire – Ironie – Parodie</em>. Innsbruck: Innsbruck University Press, 187–210.</p>
         </div>
         <div class="publication-card">
           <h4>Serielle Formen in Nachrichtenmagazinen (2015)</h4>
@@ -481,7 +479,7 @@
           <h4>Bilder zwischen Zeichen, Handlungen und Praktiken (2019)</h4>
           <p>Pfurtscheller, Daniel (2019): Bilder zwischen Zeichen, Handlungen und Praktiken. In Katharina Lobinger (Hg.), <em>Handbuch Visuelle Kommunikationsforschung</em>, 23–43. Wiesbaden: Springer.</p>
         </div>
-        <div class="publication-card" data-link="https://doi.org/10.1007/978-3-658-06738-0_2-1">
+        <div class="publication-card">
           <h4>Bilder zwischen Zeichen, Handlungen und Praktiken (2018)</h4>
           <p>Pfurtscheller, Daniel (2018): Bilder zwischen Zeichen, Handlungen und Praktiken: Grundbegriffe einer handlungsorientierten visuellen Kommunikationsforschung. In: Lobinger, Katharina (Hg.): <em>Handbuch Visuelle Kommunikationsforschung (Living Handbook)</em>. Wiesbaden: Springer, 1-21. DOI: 10.1007/978-3-658-06738-0_2-1.</p>
         </div>
@@ -494,7 +492,7 @@
           <h4>Linguistische Strohmänner (2021)</h4>
           <p>Bucher, Hans-Jürgen, Martha Kuhnhenn &amp; Daniel Pfurtscheller (2021): Linguistische Strohmänner: Die Instrumentalisierung der Sprachwissenschaft in Rudolf Stöbers Kritik gendergerechter Sprache. <em>Publizistik 66(3)</em>. 431–437. DOI: 10.1007/s11616-021-00677-w.</p>
         </div>
-        <div class="publication-card" data-link="http://doi.org/10.5281/zenodo.1041871">
+        <div class="publication-card open-access" data-link="http://doi.org/10.5281/zenodo.1041871" data-tooltip="open access">
           <h4>Public Service News on Facebook (2017)</h4>
           <p>Pfurtscheller, Daniel (2017): Public Service News on Facebook: Exploring Journalistic Usage Patterns and Reaction Data. In <em>Proceedings of the 5th Conference on CMC and Social Media Corpora</em> (cmc-corpora17). cmc-corpora Conference Series. DOI: 10.5281/zenodo.1041871 (Open Access)</p>
         </div>
