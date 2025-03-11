@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Daniel Pfurtscheller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inlined CSS -->
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+      color: #333;
+      background-color: #fafafa;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main section {
+      margin-bottom: 3rem;
+    }
+    main h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      border-left: 4px solid #007acc;
+      padding-left: 0.5rem;
+    }
+
+    /* About me */
+    #about p, #about ul {
+      margin-bottom: 1rem;
+    }
+
+    /* Publikationen-Suche */
+    #searchbar {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Container für Publikationen */
+    #publications-container h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    #publications-container ul {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    #publications-container li {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Daniel Pfurtscheller</h1>
+  <p>Assistenzprofessor für Germanistische Medienwissenschaft</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About me</a></li>
+    <li><a href="#publications">Publikationen</a></li>
+    <li><a href="mailto:daniel.pfurtscheller@uibk.ac.at">Kontakt</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <h2>About me</h2>
+    <p>
+      Ich habe in Linguistik und Medienwissenschaft promoviert und arbeite derzeit als
+      Assistensprofessor für Germanistische Medienwissenschaft an der Universität Innsbruck.
+    </p>
+    <p>
+      Der Schwerpunkt meiner Forschung liegt auf der linguistischen Analyse von Mediendiskursen und 
+      multimodaler Kommunikation. In meinen aktuellen Projekten untersuche ich 
+      Rekontextualisierungpraktiken und digitale Formen des Zitierens in den Medien.
+    </p>
+    <p>
+      Ich bin auf verschiedenen Social Medien angemeldet, aber seit einiger Zeit nicht mehr sehr aktiv. 
+      Die beste Art mich zu erreichen: Schreib mir ein E-Mail :)
+    </p>
+
+    <ul>
+      <li>E-Mail: <a href="mailto:daniel.pfurtscheller@uibk.ac.at">daniel.pfurtscheller@uibk.ac.at</a></li>
+      <li>BlueSky: @dpfu.bsky.social</li>
+      <li>ORCID: <a href="https://orcid.org/0000-0002-4769-6223" target="_blank">0000-0002-4769-6223</a></li>
+      <li>Google Scholar: <a href="https://scholar.google.com/citations?user=w57GGLEAAAAJ" target="_blank">Profil ansehen</a></li>
+      <li>ResearchGate: <a href="https://www.researchgate.net/profile/Daniel-Pfurtscheller" target="_blank">Profil ansehen</a></li>
+    </ul>
+  </section>
+
+  <!-- PUBLIKATIONEN -->
+  <section id="publications">
+    <h2>Publikationen</h2>
+    <p>Hier sollte eine durchsuchbare Liste aller meiner Publikationen stehen.</p>
+
+    <!-- Suchfeld -->
+    <input 
+      type="text" 
+      id="searchbar" 
+      onkeyup="filterPublications()" 
+      placeholder="Suche in Publikationen..."
+      aria-label="Publikationen durchsuchen" 
+    />
+
+    <!-- Komplette Publikationsliste -->
+    <div id="publications-container">
+
+      <!-- (Aus deinem gelieferten HTML kopiert, 
+           nur das oberste <h2> entfernt und Layout minimal angepasst) -->
+
+      <h3>Monografie</h3>
+      <ul>
+        <li>Pfurtscheller, Daniel (2017): Visuelle Zeitschriftengestaltung. Nachrichtenmagazine als multimodale Kommunikationsformen. Innsbruck: innsbruck university press (IUP) (= Innsbrucker Beiträge zur Kulturwissenschaft, 86).
+          <p class="ml-5">
+            Rezensiert von<br>
+            Andreas Vogel in: Medien &amp; Kommunikationswissenschaft 65.4 2017, 794–795. DOI: 
+            <a href="https://doi.org/10.5771/1615-634X-2017-4-784" target="_blank">10.5771/1615-634X-2017-4-784</a><br>
+            Beata Woźniak in: tekst i dyskurs – text und diskurs, 11 2018, 565–568. DOI: 
+            <a href="https://cejsh.icm.edu.pl/cejsh/element/bwmeta1.element.desklight-9d4f1c86-e95f-458c-87e7-3ca728d473c1" target="_blank">10.7311/tid.11.2018.34</a><br>
+            Elmar Lenhart in: Journal of Austrian Studies, 51(3) 2018, 115-118. DOI: 
+            <a href="https://doi.org/10.1353/oas.2018.0055" target="_blank">10.1353/oas.2018.0055</a>
+          </p>
+        </li>
+      </ul>
+
+      <h3>Herausgeberschaften</h3>
+      <ul>
+        <li>Bülow, Lars, Anne Diehr, Daniel Pfurtscheller &amp; Sebastian Thome (2021). Corona-Diskurse in und über Österreich. Themenheft Wiener Linguistische Gazette, Heft 90 / 2021. <a href="https://wlg.univie.ac.at/aktuelle-ausgabe/abstracts-ausgabe-902021" target="_blank">https://wlg.univie.ac.at/aktuelle-ausgabe/abstracts-ausgabe-902021</a>/ Open Access</li>
+        <li>Blasch, Lisa / Pfurtscheller, Daniel / Schröder, Thomas (2018): Schneller, bunter, leichter. Kommunikationsstile im medialen Wandel. Innsbruck: innsbruck university press (IUP) (= Innsbrucker Beiträge zur Kulturwissenschaft / Germanistische Reihe, 88).</li>
+        <li>Ortner, Heike / Pfurtscheller, Daniel / Rizzolli, Michaela / Wiesinger, Andreas (2014): Datenflut und Informationskanäle. Innsbruck: innsbruck university press (IUP) (= Edited Volume Series). URN:
+          <a href="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-385" target="_blank">urn:nbn:at:at-ubi:3-385</a> Open Access
+        </li>
+        <li>Dander, Valentin / Gründhammer, Veronika / Ortner, Heike / Pfurtscheller, Daniel / Rizzolli, Michaela (2013): Medienräume: Regionalität und Materialität. Innsbruck: innsbruck university press (IUP) (= Edited Volume Series). URN:
+          <a href="http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429" target="_blank">urn:nbn:at:at-ubi:3-429</a> Open Access
+        </li>
+      </ul>
+
+      <h3>Aufsätze in Zeitschriften und Sammelbänden</h3>
+      <ul>
+        <li>Pfurtscheller, Daniel (2024): Digitale Live-Öffentlichkeiten: Eine medienlinguistische Analyse von parlamentarischen Live-Tickern auf DerStandard.at. Zeitschrift für germanistische Linguistik 52(1), 95–123. doi:
+          <a href="https://doi.org/10.1515/zgl-2024-2005" target="_blank">10.1515/zgl-2024-2005</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2023). Vom Fundus zum Korpus. Reddit als Medium und digitale Sprachressource. In: Korpora Deutsch als Fremdsprache 3(2), 137–159.
+          <a href="https://doi.org/10.48694/KORDAF.3864" target="_blank">https://doi.org/10.48694/KORDAF.3864</a> Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2023). Zitieren via Screenshot. Digitale Pragmatik und Medialität bildbasierter Zitierpraktiken. In Simon Meier-Vieracker, Lars Bülow, Konstanze Marx &amp; Robert Mroczynski (Hg.), Digitale Pragmatik, 109–126. Berlin, Heidelberg: Springer.
+          <a href="https://doi.org/10.1007/978-3-662-65373-9_6" target="_blank">https://doi.org/10.1007/978-3-662-65373-9_6</a>
+        </li>
+        <li>Pfurtscheller, Daniel (2022). From private phones to public screens: Cross-media recontextualization of chat discourse in the case of the Austrian ÖVP corruption affair. In: Frontiers in Communication 7. DOI:
+          <a href="https://doi.org/10.3389/fcomm.2022.1059131" target="_blank">10.3389/fcomm.2022.1059131</a> Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2022). Swipe Up! Multimodale Nachrichtenpräsentation in journalistischen Instagram-Storys. In: Ulla Autenrieth &amp; Cornelia Brantner (Hg.): It’s All About Video. Visuelle Kommunikation im Bann bewegter Bilder. Köln: Halem, 208-228.
+          [<a href="https://books.google.at/books?id=pu14EAAAQBAJ&amp;lpg=PA207&amp;dq=pfurtscheller%20%22swipe%20up%22%20Ulla%20Autenrieth%20%2F%20Cornelia%20Brantner%20(Hrsg.)%20It%E2%80%99s%20All%20About%20Video%20Visuelle%20Kommunikation%20im%20Bann%20bewegter%20Bilder&amp;hl=de&amp;pg=PA208#v=onepage&amp;q=pfurtscheller%20%22swipe%20up%22%20Ulla%20Autenrieth%20%2F%20Cornelia%20Brantner%20(Hrsg.)%20It%E2%80%99s%20All%20About%20Video%20Visuelle%20Kommunikation%20im%20Bann%20bewegter%20Bilder&amp;f=false" target="_blank">Vorschau auf Google-Books</a>]
+        </li>
+        <li>Pfurtscheller, Daniel (2022). „Klasse Greta gut gekontert“. Reflexive Zitierpraktiken und Rekontextualisierung von ‚schlagfertiger‘ Social-Media-Interaktion. In: Florian Busch, Pepe Droste &amp; Elisa Wessels, (Hg.): Sprachreflexive Praktiken: Empirische Perspektiven auf Metakommunikation (= LiLi: Studien zu Literaturwissenschaft und Linguistik 4). Berlin, Heidelberg: Springer. 153–176.
+          <a href="https://doi.org/10.1007/978-3-662-64597-0_7" target="_blank">https://doi.org/10.1007/978-3-662-64597-0_7</a>.
+        </li>
+        <li>Pfurtscheller, Daniel (2022). Nachrichtenfans. Fankommunikation in der interaktiven Nachbearbeitung von österreichischen Fernsehnachrichten auf Twitter. In: Stefan Hauser &amp; Simon Meier-Vieracker (Hg.):
+          <a href="https://www.peterlang.com/document/1175486%20" target="_blank">Fankulturen und Fankommunikation</a> (= FORUM ANGEWANDTE LINGUISTIK – F.A.L., 68), 51-77. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2022): Medienlinguistisch transkribieren. Transkriptions- und Annotationspraktiken in der qualitativen Forschung zu digitaler Medienkommunikation. In: Schwarze, Cordula/Grawunder, Sven (Hg.) (2022): Transkription und Annotation gesprochener Sprache und multimodaler Interaktion: Konzepte, Probleme, Lösungen. Tübingen: Narr, 186-210. DOI:
+          <a href="https://doi.org/10.24053/9783823394693" target="_blank">10.24053/9783823394693</a>
+        </li>
+        <li>Michel, Sascha / Pfurtscheller, Daniel (2021): »Ich bin seit Montag Zuhause in Quarantäne« – Zur Verbindung von Erzählen und Argumentieren in Social- Media-Kommentaren zu politischen Reden. In: Zeitschrift für Literaturwissenschaft und Linguistik 51.2021, 255–279. DOI:
+          <a href="https://doi.org/10.1007/s41244-021-00199-y" target="_blank">10.1007/s41244-021-00199-y</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2020): More than recycled snippets of news. Quote cards as recontextualized discourse on social media. In: AILA Review 33.2020, 203-225. DOI:
+          <a href="https://doi.org/10.1075/aila.00037.pfu" target="_blank">10.1075/aila.00037.pfu</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2020). „Der Moment wenn die Chefin ein Weihnachtsbaum ist ❤“. Weihnachten als kommunikative Ressource in der politischen Social-Media-Kommunikation. In: Marx, Konstanze (Hg.): Weihnachtslinguistik. Tübingen: Narr, 181–188.</li>
+        <li>Venema, Rebecca / Pfurtscheller, Daniel / Lobinger, Katharina (2020): Doing visual analysis online. Forschungsethische Herausforderungen und Handlungsempfehlungen zur Analyse vernetzter Bilder. In: Brantner, Cornelia / Götzenbrucker, Gerit / Lobinger, Katharina / Schreiber, Maria (Hg.): Vernetzte Bilder. Visuelle Kommunikation in Sozialen Medien. Berlin: von Halem, 288–310.</li>
+        <li>Pfurtscheller, Daniel (2020): Alltägliche Medienkritik in der Social-Media-Interaktion auf Facebook. Zur Rekonstruktion medienkritischer Praktiken am Beispiel des Facebook-Accounts von Zeit im Bild (ZIB) In: Hans-Jürgen Bucher (Hg.): Medienkritik: Zwischen ideologischer Instrumentalisierung und kritischer Aufklärung, 252-273. Berlin: von Halem.</li>
+        <li>Pfurtscheller, Daniel (2020): Öffentlichen Sprachgebrauch auf Facebook untersuchen. Zugänge, Probleme, Erste Hilfe. In Konstanze Marx, Henning Lobin &amp; Axel Schmidt (Hrsg.), Deutsch in Sozialen Medien. Interaktiv – multimodal – vielfältig. Berlin, Boston: De Gruyter. 355–358.</li>
+        <li>Brantner, Cornelia / Lobinger, Katharina / Pfurtscheller, Daniel (2019): Politik im Spot(t)-Format: Humor im österreichischen Wahlkampf 2017. In: Schicha, Christian (Hg.): Wahlwerbespots 2017. Wiesbaden: VS, 509-588.</li>
+        <li>Pfurtscheller, Daniel (2019): Der rote Rahmen. Beobachtungen zur Medienkultur des Nachrichtenmagazins entlang eines visuellen Musterhinweises. In: Jahrbuch für Internationale Germanistik 51.2, 45-62. DOI:
+          <a href="https://doi.org/10.3726/JA512_45" target="_blank">10.3726/JA512_45</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2019): Reizende Vorschau. Thumbnail-Bilder als Teil multimodaler Verweisbausteine und kontaktorientierter Medienlogik zwischen Teasing und Clickbaiting. In: Schwender, Clemens / Brantner, Cornelia / Graubner, Camilla / von Gottberg, Joachim (Hg.): zeigen – andeuten – verstecken: Bilder zwischen Verantwortung und Provokation. Berlin: von Halem, 121-142.</li>
+        <li>Pfurtscheller, Daniel (2019): Über Nachrichten reden, „aber hart!“. Emotionalisierung, multimodale Inszenierung und kommunikative Aneignung von Nachrichtentexten in Videoblogs auf YouTube. In: Hauser, Stefan / Luginbühl, Martin / Susanne Tienken (Hg.): Mediale Emotionskulturen. Bern: Lang, 109-134.</li>
+        <li>Pfurtscheller, Daniel (2018): 40 Jahre „1, 2 oder 3“. Zum medialen Wandel eines Langzeitformats der nicht-fiktionalen Fernsehunterhaltung für Kinder. In: Lisa Blasch, Daniel Pfurtscheller, Thomas Schröder (Hg.): Schneller, bunter, leichter? Kommunikationsstile im medialen Wandel. Innsbruck: innsbruck university press (IUP), 129–146.</li>
+        <li>Pfurtscheller, Daniel (2016): Persuasives Handeln: objektbezogen, multimodal, massenmedial. Gebrauch der „Taferln“ in österreichischen TV-Wahldebatten. In: Acta Universitatis Wratislaviensis. Studia Linguistica 35, 37–66. DOI:
+          <a href="https://doi.org/10.19195/0137-1169.35.3" target="_blank">10.19195/0137-1169.35.3</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2016): Wenn Nachrichtenmagazine Ebola erklären und Viren visualisieren. Multimodale Wissensformate am Beispiel der Ebola-Berichterstattung 2014. In: Sabban, Annette / Jaki, Sylvia (Hg.): Wissensformate in den Medien. Analysen aus Medienlinguistik und Medienwissenschaft. Berlin: Frank &amp; Timme, 77-100. DOI:
+          <a href="https://doi.org/10.5281/zenodo.1406129" target="_blank">10.5281/zenodo.1406129</a>. Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2016): Verteiltes Zeigen. Multimodalität in Illustrierten Zeitschriften um 1900 am Beispiel serieller Bildverwendung in der populären Wochenzeitschrift "Das interessante Blatt". In: Igl, Natalia / Menzel, Julia (Hg.): Illustrierte Zeitschriften um 1900. Mediale Eigenlogik, Multimodalität und Metaisierung. Bielefeld: transcript, 75–105. DOI:
+          <a href="https://doi.org/10.14361/9783839436592-004" target="_blank">10.14361/9783839436592-004</a>.
+          [<a href="https://books.google.at/books?id=_CtTDQAAQBAJ&amp;lpg=PP1&amp;hl=de&amp;pg=PA75#v=onepage&amp;q&amp;f=false" target="_blank">Vorschau auf Google Books</a>]
+        </li>
+        <li>Pfurtscheller, Daniel (2016): Scherzen mit Bild und Text. Medienbilder und Mediendesign in komischen Verwendungszusammenhängen. In: Amann, Klaus / Hackl, Wolfgang (Hg.): Satire – Ironie – Parodie. Aspekte des Komischen in der deutschen Sprache und Literatur. Innsbruck: Innsbruck University Press (= Innsbrucker Beiträge zur Kulturwissenschaft. Germanistische Reihe, 85), 187–210. DOI:
+          <a href="https://doi.org/10.5281/zenodo.1182565" target="_blank">10.5281/zenodo.1182565</a>
+        </li>
+        <li>Pfurtscheller, Daniel (2015): Serielle Formen in Nachrichtenmagazinen. In: Stephan Müller (Hg.): Serielle Formen. Wien: Praesens (= Stimulus – Mitteilungen der Österreichischen Gesellschaft für Germanistik 2013), 86–104.</li>
+        <li>Pfurtscheller, Daniel (2014): Funktionale Bausteine von multimodalen Texten: Nachrichtenmagazine als Kommunikationsangebote. In: Antos, Gerd/ Jarosz, Józef/ Opiłowski, Roman (Hg.): Sprache und Bild im massenmedialen Text. Formen, Funktionen und Perspektiven im deutschen und polnischen Kommunikationsraum. Dresden: Atut &amp; Neisse Verlag (=
+          Breslauer Studien zur Medienlinguistik 1), 257–271.
+        </li>
+        <li>Pfurtscheller, Daniel (2014): Narrative Denk- und Textmuster in Werbeanzeigen. In: Hackl, Wolfgang / Kupczynska, Kalina / Wiesmüller, Wolfgang (Hg.): Sprache – Literatur – Erkenntnis. Wien: Praesens (= Stimulus – Mitteilungen der Österreichischen Gesellschaft für Germanistik 2012), 431–444.</li>
+        <li>Pfurtscheller, Daniel / Dorner, Christiane (2013): Lokales Fernsehen in Tirol. In: Dander, Valentin / Gründhammer, Veronika / Ortner, Heike / Pfurtscheller, Daniel / Rizzolli, Michaela (Hg.): Medienräume. Materialität und Regionalität. Innsbruck: iup (= Edited Volume Series), 129-144.
+          [<a href="/media/filer_public/cd/8c/cd8ce974-7a6d-42be-8acb-ce0429def825/pfurtscheller_dorner-2013-lokales_fernsehen_tirol.pdf" target="_blank">PDF</a>]
+        </li>
+        <li>Pfurtscheller, Daniel (2013). Das Magazincover. Eine multimodale Pressetextsorte im Vergleich. In: Estudios Filológicos Alemanes 26, 375–386.</li>
+      </ul>
+
+      <h3>Handbuchartikel</h3>
+      <ul>
+        <li>Hansen, Solveig L. / Pfurtscheller, Daniel (2022). Multimodality. In: Evelyn Ho, Carma Bylund &amp; Julia van Weert (Hg.): The International Encyclopedia of Health Communication, Wiley.
+          <a href="https://doi.org/10.1002/9781119678816.iehc0790" target="_blank">https://doi.org/10.1002/9781119678816.iehc0790</a>.
+        </li>
+        <li>Lobinger, Katharina / Reißmann, Wolfgang / Pfurtscheller, Daniel / Brantner, Cornelia / Venema, Rebecca / Marchiori, Eleonora (2019): Theoretische, thematische, forschungsethische und methodologische Herausforderungen der Visuellen Kommunikationsforschung. In Lobinger, Katharina (Hg.), Handbuch Visuelle Kommunikationsforschung. Wiesbaden: Springer Fachmedien, 723–749.</li>
+        <li>Pfurtscheller, Daniel (2019): Bilder zwischen Zeichen, Handlungen und Praktiken. In Katharina Lobinger (Hg.), Handbuch Visuelle Kommunikationsforschung, 23–43. Wiesbaden: Springer.</li>
+        <li>Pfurtscheller, Daniel (2018): Bilder zwischen Zeichen, Handlungen und Praktiken: Grundbegriffe einer handlungsorientierten visuellen Kommunikationsforschung. In: Lobinger, Katharina (Hg.): Handbuch Visuelle Kommunikationsforschung (Living Handbook). Wiesbaden: Springer, 1-21 DOI:
+          <a href="https://doi.org/10.1007/978-3-658-06738-0_2-1" target="_blank">10.1007/978-3-658-06738-0_2-1</a>.
+        </li>
+      </ul>
+
+      <h3>Varia</h3>
+      <ul>
+        <li>Bucher, Hans-Jürgen, Martha Kuhnhenn &amp; Daniel Pfurtscheller (2021): Linguistische Strohmänner: Die Instrumentalisierung der Sprachwissenschaft in Rudolf Stöbers Kritik gendergerechter Sprache. Publizistik 66(3). 431–437. doi:
+          <a href="https://doi.org/10.1007/s11616-021-00677-w" target="_blank">10.1007/s11616-021-00677-w</a>.
+        </li>
+        <li>Pfurtscheller, Daniel (2017): Public Service News on Facebook: Exploring Journalistic Usage Patterns and Reaction Data. In Proceedings of the 5th Conference on CMC and Social Media Corpora for the Humanities (cmccorpora17). cmc-corpora Conference Series. DOI:
+          <a href="http://doi.org/10.5281/zenodo.1041871" target="_blank">10.5281/zenodo.1041871</a> Open Access
+        </li>
+        <li>Pfurtscheller, Daniel (2017): CLARIN UI Event. Using TEI for representing CMC/social media data. URL:
+          <a href="https://www.clarin.eu/news/clarin-ui-event-using-tei-%20representing-cmcsocial-media-data" target="_blank">https://www.clarin.eu/news/clarin-ui-event-using-tei- representing-cmcsocial-media-data</a>.
+        </li>
+        <li>Pfurtscheller, Daniel (2015): Praxen politischer Online-Kommunikation: Demokratisierung durch das Medium Internet? Bericht aus der GfdS. In: Der Sprachdienst 2/2015, 93–95.</li>
+      </ul>
+
+    </div><!-- /publications-container -->
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Daniel Pfurtscheller</p>
+
+  <!-- Inline JavaScript zur Filterung der Publikationen -->
+  <script>
+    function filterPublications() {
+      const input = document.getElementById('searchbar');
+      const filter = input.value.toLowerCase();
+      const items = document.querySelectorAll('#publications-container li');
+
+      for (let i = 0; i < items.length; i++) {
+        let txtValue = items[i].textContent || items[i].innerText;
+        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+          items[i].style.display = "";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</footer>
+
+</body>
+</html>

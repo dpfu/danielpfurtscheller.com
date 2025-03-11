@@ -1,8 +1,11 @@
-index: partials/head.html partials/header.html partials/main.html partials/nav.html partials/footer.html
-	cat partials/head.html partials/header.html partials/main.html partials/nav.html partials/footer.html > dist/index.html
+# Standard-Target, das den Inhalt von src nach dist kopiert
+all: dist
 
+# Erstellt (falls nötig) den dist-Ordner und kopiert alle Dateien
+dist:
+	mkdir -p dist
+	cp -r src/* dist/
 
-.PHONY: clean
-
+# Optionales Target zum Aufräumen, wenn man z. B. den dist-Ordner löschen möchte
 clean:
-    @echo "Implement me :("
+	rm -rf dist
