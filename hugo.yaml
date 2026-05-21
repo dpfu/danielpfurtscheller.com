@@ -1,0 +1,77 @@
+baseURL: "https://www.danielpfurtscheller.com/"
+languageCode: "de-at"
+defaultContentLanguage: "de"
+title: "Daniel Pfurtscheller"
+enableRobotsTXT: true
+summaryLength: 30
+
+pagination:
+  pagerSize: 24
+
+disableKinds:
+  - taxonomy
+  - term
+
+outputs:
+  home:
+    - HTML
+    - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
+
+menus:
+  main:
+    - name: "Posts"
+      pageRef: "/posts"
+      weight: 10
+    - name: "Publikationen"
+      pageRef: "/publications"
+      weight: 20
+    - name: "Vorträge"
+      pageRef: "/talks"
+      weight: 30
+    - name: "Über mich"
+      url: "/#about"
+      weight: 50
+
+params:
+  author: "Daniel Pfurtscheller"
+  affiliation: "Germanistische Medienwissenschaft · Universität Innsbruck"
+  description: "Akademisches Portfolio von Daniel Pfurtscheller: Germanistische Medienwissenschaft, Posts, Publikationen, Vorträge und Software."
+  heroTitle: "Hi, ich bin Daniel Pfurtscheller."
+  intro: "Mich interessiert, wie wir in und mit Medien kommunizieren: mit Sprache, Bildern und dem ganzen Drumherum."
+  about: "Assistenzprofessor für Germanistische Medienwissenschaft an der Universität Innsbruck. Meine Forschung verbindet Medienwissenschaft, multimodale Analyse und linguistisch informierte Diskursforschung. Diese Seite sammelt Posts, Publikationen, Vorträge und digitale Werkzeuge."
+  email: "daniel.pfurtscheller@uibk.ac.at"
+  bluesky: "https://bsky.app/profile/dpfu.bsky.social"
+  linkedin: "https://www.linkedin.com/in/daniel-pfurtscheller"
+  orcid: "https://orcid.org/0000-0002-4769-6223"
+  googleScholar: "https://scholar.google.com/citations?user=w57GGLEAAAAJ"
+  researchGate: "https://www.researchgate.net/profile/Daniel-Pfurtscheller"
+  university: "https://www.uibk.ac.at/de/germanistik/"
+  heroImage: "/img/hero/daniel-photo.webp"
+  defaultImage: "/img/og/daniel-pfurtscheller.png"
+  dateFormat: "02.01.2006"
+  workingPapers:
+    - title: "„Stop-and-Go“ in Reaction-Videos: multimodale Herstellung und Organisation digitaler Zeitlichkeit"
+      authors: "Carolin Dix & Daniel Pfurtscheller"
+      affiliation: "Universität Innsbruck"
+      note: "Erscheint in: „Zeitlichkeit und digitale Kommunikation“, Buchreihe «Digitale Linguistik» (hrsg. von Jannis Androutsopoulos und Konstanze Marx), Metzler Verlag. Herausgegeben von Florian Busch, Karina Frick, Jasmin Lallo und Julie Täge."
+    - title: "Das Medienspezifische – ein unterbestimmtes, aber analytisch brauchbares Konzept in der medienlinguistischen Forschung"
+      authors: "Daniel Pfurtscheller & Ina Pick"
+      affiliation: "Universität Innsbruck; Universität Bielefeld"
+      note: "Erscheint in: jfml (Journal für Medienlinguistik), offenes Themenheft „Quo vadis, Medienlinguistik?“."
+    - title: "Sorting methods in visual research: Strengths and limitations for visual data analysis and visual sense-making"
+      authors: "Katharina Lobinger, Daniel Pfurtscheller & T J Thomson"
+      affiliation: "Università della Svizzera italiana, Lugano; Universität Innsbruck; RMIT University, Melbourne"
+      note: "Erscheint in: The Routledge International Handbook of Visual Inquiry: Methods and Pedagogies for Visual Literacy, hg. von Dana S. Thompson und Ricardo López-León. Taylor & Francis."
+    - title: "Reaktionsvideos als reflexive Medienpraktiken"
+      note: "Artikelmanuskript, in Arbeit."
+  upcomingTalks:
+    - title: "Social Pragmatics: Methoden der Sprachgebrauchsuntersuchung in den Sozialen Medien"
+      date: "8.–9. Oktober 2026"
+      note: "GAL Research School, Greifswald"

@@ -1,0 +1,69 @@
+{{ $people := .Params.authors | default .Params.speakers }}
+{{ $context := .Params.source | default .Params.event }}
+{{ $place := .Params.place }}
+{{ $entryType := .Params.display_type | default .Params.entry_type }}
+{{ $peopleText := "" }}
+{{ $titleLinks := true }}
+{{ $displayTitle := .Params.short_title | default .Title }}
+{{ $summary := "" }}
+{{ $openAccessSearch := "" }}
+{{ with $people }}{{ $peopleText = delimit . " " }}{{ end }}
+{{ if ne .Section "talks" }}
+  {{ with .Params.abstract }}{{ $summary = . }}{{ end }}
+  {{ if not $summary }}{{ with .Description }}{{ $summary = . }}{{ end }}{{ end }}
+  {{ with .Params.open_access }}
+    {{ $status := "" }}
+    {{ if reflect.IsMap . }}
+      {{ with (or .status .oa_status) }}{{ $status = printf "%v" . | lower }}{{ end }}
+    {{ else }}
+      {{ $status = printf "%v" . | lower }}
+    {{ end }}
+    {{ if in (slice "gold" "hybrid" "green" "bronze" "open") $status }}
+      {{ $openAccessSearch = "Open Access frei lesbar" }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with .CurrentSection }}
+  {{ if isset .Params "catalog_title_links" }}
+    {{ $titleLinks = .Params.catalog_title_links }}
+  {{ end }}
+{{ end }}
+<article class="catalog-entry" data-entry data-search="{{ delimit (slice .Title .Description .Params.year $entryType $peopleText $context $place .Params.citation $openAccessSearch) " " }}">
+  <div class="entry-meta">
+    <h3>
+      {{ if $titleLinks }}
+        <a href="{{ .RelPermalink }}">{{ $displayTitle }}</a>
+      {{ else }}
+        {{ $displayTitle }}
+      {{ end }}
+    </h3>
+    {{ with $entryType }}<p class="entry-type">{{ . }}</p>{{ end }}
+    {{ with .Params.year }}<p class="entry-year">{{ . }}</p>{{ end }}
+    {{ if eq .Section "publications" }}
+      {{ partial "open-access-pill.html" . }}
+    {{ end }}
+  </div>
+  <div class="entry-body">
+    {{ if eq .Section "talks" }}
+      {{ with $context }}<p>{{ . }}{{ with $place }} · {{ . }}{{ end }}</p>{{ end }}
+      <p class="entry-context">{{ .Date.Format (site.Params.dateFormat | default "02.01.2006") }}</p>
+    {{ else }}
+      {{ with $summary }}<p>{{ . | markdownify | plainify | truncate 420 }}</p>{{ end }}
+      {{ with $people }}<p class="entry-context people">{{ delimit . "; " }}</p>{{ end }}
+      {{ if $titleLinks }}<p class="entry-actions"><a class="overview-more" href="{{ .RelPermalink }}">Mehr</a></p>{{ end }}
+    {{ end }}
+    {{ if eq .Section "talks" }}
+      {{ with .Params.links }}
+        <p class="resource-links entry-actions">
+          {{ range . }}
+            {{ $label := .label }}
+            {{ if eq $label "Weblink" }}
+              {{ $label = "Nachweis" }}
+            {{ end }}
+            <a href="{{ .url }}">{{ $label }}</a>
+          {{ end }}
+        </p>
+      {{ end }}
+    {{ end }}
+  </div>
+</article>

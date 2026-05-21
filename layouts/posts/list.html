@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="wrap page wide-page overview-page">
+    <h1 class="sr-only">{{ .Title }}</h1>
+    <div class="entry-list">
+      {{ range .Paginator.Pages }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

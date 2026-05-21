@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <article class="wrap article article-with-meta">
+    <aside class="article-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default "02.01.2006") }}</time>
+      {{ with .Params.kicker }}<span>{{ . }}</span>{{ end }}
+    </aside>
+    <div>
+      <header class="article-header">
+        <p class="eyebrow">Post</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </header>
+      <div class="article-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </article>
+{{ end }}

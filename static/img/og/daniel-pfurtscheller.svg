@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Daniel Pfurtscheller</title>
+  <desc id="desc">OpenGraph-Titelgrafik für die akademische Website von Daniel Pfurtscheller.</desc>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="64" y="64" width="1072" height="502" fill="#f7f7f2" stroke="#deded6" stroke-width="3"/>
+  <path d="M64 164H1136" stroke="#deded6" stroke-width="3"/>
+  <text x="96" y="126" fill="#1769aa" font-family="Menlo, Consolas, monospace" font-size="30" font-weight="700">AKADEMISCHES PORTFOLIO</text>
+  <text x="96" y="300" fill="#202124" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800">Daniel</text>
+  <text x="96" y="394" fill="#202124" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800">Pfurtscheller</text>
+  <text x="96" y="492" fill="#64676d" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="34">Germanistische Medienwissenschaft · Universität Innsbruck</text>
+  <circle cx="1018" cy="380" r="78" fill="none" stroke="#1769aa" stroke-width="12"/>
+  <path d="M970 380h96M1018 332v96" stroke="#1769aa" stroke-width="12" stroke-linecap="round"/>
+</svg>

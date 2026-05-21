@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <article class="wrap article">
+    <header class="article-header">
+      <p class="eyebrow">{{ .Params.eyebrow | default (.Section | default "Seite") }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+    {{ if or (eq .Params.layout "about") (eq .File.BaseFileName "about") }}
+      <section class="profile-links-section" aria-labelledby="profile-links-title">
+        <h2 id="profile-links-title">Kontakt und Profile</h2>
+        <div class="profile-links-grid">
+          {{ partial "icon-link.html" (dict "Icon" "university" "Label" "Universität Innsbruck" "URL" site.Params.university "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "mail" "Label" site.Params.email "URL" (printf "mailto:%s" site.Params.email) "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "bluesky" "Label" "Bluesky" "URL" site.Params.bluesky "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "linkedin" "Label" "LinkedIn" "URL" site.Params.linkedin "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "orcid" "Label" "ORCID" "URL" site.Params.orcid "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "scholar" "Label" "Google Scholar" "URL" site.Params.googleScholar "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "researchgate" "Label" "ResearchGate" "URL" site.Params.researchGate "Class" "profile-link") }}
+          {{ partial "icon-link.html" (dict "Icon" "rss" "Label" "RSS" "URL" ("index.xml" | relURL) "Class" "profile-link") }}
+        </div>
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

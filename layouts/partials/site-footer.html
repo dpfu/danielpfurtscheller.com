@@ -1,0 +1,36 @@
+<footer class="site-footer" id="about">
+  <div class="wrap about-footer">
+    <div>
+      <h2 class="area-header">Über mich</h2>
+      <p>{{ site.Params.about }}</p>
+    </div>
+    <img class="footer-portrait" src="{{ site.Params.heroImage }}" alt="Porträt von Daniel Pfurtscheller">
+    <div class="contact-list">
+      <p>{{ partial "icon-link.html" (dict "Icon" "university" "Label" "Universität Innsbruck" "URL" site.Params.university "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "mail" "Label" site.Params.email "URL" (printf "mailto:%s" site.Params.email) "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "bluesky" "Label" "Bluesky" "URL" site.Params.bluesky "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "linkedin" "Label" "LinkedIn" "URL" site.Params.linkedin "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "orcid" "Label" "ORCID" "URL" site.Params.orcid "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "scholar" "Label" "Google Scholar" "URL" site.Params.googleScholar "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "researchgate" "Label" "ResearchGate" "URL" site.Params.researchGate "Class" "contact-link") }}</p>
+      <p>{{ partial "icon-link.html" (dict "Icon" "rss" "Label" "RSS" "URL" ("index.xml" | relURL) "Class" "contact-link") }}</p>
+    </div>
+  </div>
+  <div class="legal-footer">
+    <div class="wrap legal-grid">
+      <section>
+        <h2>Impressum</h2>
+        <p>Medieninhaber und für den Inhalt verantwortlich: Daniel Pfurtscheller, Institut für Germanistik, Universität Innsbruck, Innrain 52, A-6020 Innsbruck, Österreich.</p>
+        <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+      </section>
+      <section>
+        <h2>Offenlegung</h2>
+        <p>Grundlegende Richtung dieser Website: persönliches akademisches Portfolio mit Beiträgen, Publikationen, Vorträgen und Materialien zu Forschung und Lehre.</p>
+      </section>
+      <section>
+        <h2>Datenschutz</h2>
+        <p>Diese Website setzt keine Cookies, lädt keine externen Schriften und bindet keine Analyse- oder Trackingdienste ein. Beim Aufruf können technisch notwendige Server-Logdaten beim Hosting-Anbieter Netlify entstehen.</p>
+      </section>
+    </div>
+  </div>
+</footer>

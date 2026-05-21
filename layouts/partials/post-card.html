@@ -1,0 +1,12 @@
+<article class="entry">
+  <div class="entry-meta">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default "02.01.2006") }}</time>
+  </div>
+  <div class="entry-body">
+    <p>
+      {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}
+      <a class="overview-more" href="{{ .RelPermalink }}">Weiterlesen</a>
+    </p>
+  </div>
+</article>

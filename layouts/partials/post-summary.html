@@ -1,0 +1,12 @@
+<article class="post-summary">
+  <div class="post-kicker">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default "2 Jan 2006") }}</time></p>
+  </div>
+  <div class="post-excerpt">
+    <p>
+      {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}
+      <a class="read-more" href="{{ .RelPermalink }}">Weiterlesen</a>
+    </p>
+  </div>
+</article>

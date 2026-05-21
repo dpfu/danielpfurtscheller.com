@@ -1,0 +1,5 @@
+{{ $class := .Class | default "" }}
+<a class="icon-link {{ $class }}" href="{{ .URL }}">
+  {{ partial "profile-icon.html" (dict "Name" .Icon "Class" "icon-link-symbol") }}
+  <span>{{ .Label }}</span>
+</a>

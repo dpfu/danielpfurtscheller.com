@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="Daniel Pfurtscheller">
+      <span class="brand-full" aria-hidden="true">Daniel Pfurtscheller</span>
+      <span class="brand-short" aria-hidden="true">Pfurtscheller</span>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <details class="mobile-nav">
+      <summary>
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only">Menü</span>
+      </summary>
+      <nav class="mobile-nav-panel" aria-label="Mobile Hauptnavigation">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </details>
+  </div>
+</header>

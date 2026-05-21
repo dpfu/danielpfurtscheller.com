@@ -1,0 +1,231 @@
+{{ define "main" }}
+  {{ $publicationType := .Params.display_type | default .Params.entry_type }}
+  {{ $citationItems := slice }}
+  {{ with .Params.citation_formats }}
+    {{ with (or (index . "apa7") (index . "apa_7") (index . "apa") (index . "APA7") (index . "APA")) }}
+      {{ $citationItems = $citationItems | append (dict "label" "APA 7" "text" .) }}
+    {{ end }}
+    {{ with (or (index . "unified_style_linguistics") (index . "unified_style_sheet") (index . "unified-style-sheet") (index . "uss") (index . "linguistics")) }}
+      {{ $citationItems = $citationItems | append (dict "label" "Unified Style" "text" .) }}
+    {{ end }}
+    {{ with (or (index . "bibtex") (index . "bibTeX") (index . "BibTeX")) }}
+      {{ $citationItems = $citationItems | append (dict "label" "BibTeX" "text" . "code" true) }}
+    {{ end }}
+  {{ end }}
+  {{ if and (not $citationItems) .Params.citation }}
+    {{ $citationItems = $citationItems | append (dict "label" "Zitation" "text" .Params.citation) }}
+  {{ end }}
+  {{ $displayTitle := .Params.short_title | default .Title }}
+  {{ $doiText := "" }}
+  {{ with .Params.doi }}{{ $doiText = printf "%v" . }}{{ end }}
+
+  {{ $linksParam := .Params.links }}
+  {{ $accessLinks := .Params.access_links }}
+  {{ if and (not $accessLinks) (reflect.IsMap $linksParam) }}
+    {{ $accessLinks = index $linksParam "access_links" }}
+  {{ end }}
+  {{ if and (not $accessLinks) (reflect.IsSlice $linksParam) }}
+    {{ $accessLinks = $linksParam }}
+  {{ end }}
+  {{ $displayAccessLinks := slice }}
+  {{ $hiddenAccessLabels := slice "katalog" "verlag" "quelle" }}
+  {{ with $accessLinks }}
+    {{ range . }}
+      {{ $linkLabel := .label | default .url }}
+      {{ if not (in $hiddenAccessLabels (lower $linkLabel)) }}
+        {{ $displayAccessLinks = $displayAccessLinks | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $openAccess := .Params.open_access }}
+  {{ $oaStatus := "" }}
+  {{ $oaSource := "" }}
+  {{ $oaChecked := "" }}
+  {{ $oaLicense := "" }}
+  {{ $oaURL := "" }}
+  {{ if reflect.IsMap $openAccess }}
+    {{ with (or $openAccess.status $openAccess.oa_status) }}
+      {{ $oaStatus = printf "%v" . | lower }}
+    {{ end }}
+    {{ with $openAccess.source }}{{ $oaSource = . }}{{ end }}
+    {{ with $openAccess.checked }}{{ $oaChecked = . }}{{ end }}
+    {{ with $openAccess.license }}{{ $oaLicense = . }}{{ end }}
+    {{ with $openAccess.url }}{{ $oaURL = . }}{{ end }}
+  {{ else }}
+    {{ with $openAccess }}{{ $oaStatus = printf "%v" . | lower }}{{ end }}
+  {{ end }}
+  {{ $oaLabels := dict
+    "gold" "Gold OA"
+    "hybrid" "Hybrid OA"
+    "green" "Green OA"
+    "bronze" "Bronze OA"
+    "open" "Open Access"
+    "closed" "Kein OA"
+    "unknown" ""
+  }}
+  {{ $oaDescriptions := dict
+    "gold" "Freier Zugang im Open-Access-Journal."
+    "hybrid" "Freier Zugang beim Verlag."
+    "green" "Freier Zugang über ein Repositorium."
+    "bronze" "Frei lesbar, Lizenz nicht eindeutig."
+    "open" "Freier Zugang nachgewiesen."
+    "closed" "Kein Open Access."
+    "unknown" ""
+  }}
+  {{ $oaLabel := index $oaLabels $oaStatus | default "OA-Status" }}
+  {{ $oaDescription := index $oaDescriptions $oaStatus | default "Open-Access-Status erfasst." }}
+  {{ $oaMeta := slice }}
+  {{ with $oaSource }}{{ $oaMeta = $oaMeta | append (printf "Quelle: %s" .) }}{{ end }}
+  {{ with $oaLicense }}{{ $oaMeta = $oaMeta | append (printf "Lizenz: %s" (replace (upper .) "-" " ")) }}{{ end }}
+  {{ with $oaChecked }}{{ $oaMeta = $oaMeta | append (printf "Stand: %s" .) }}{{ end }}
+  {{ $readableStatuses := slice "gold" "hybrid" "green" "bronze" "open" }}
+  {{ $oaReadable := in $readableStatuses $oaStatus }}
+  {{ $oaButtonLabel := $oaLabel }}
+  {{ if $oaReadable }}{{ $oaButtonLabel = "Frei lesbar" }}{{ end }}
+  {{ $oaNoteText := $oaDescription }}
+  {{ if and $oaReadable (ne $oaLabel "Open Access") }}
+    {{ $oaNoteText = printf "%s: %s" $oaLabel $oaDescription }}
+  {{ end }}
+  {{ $hasDirectReadableLink := false }}
+  {{ $hasOAURLDisplayed := false }}
+  {{ with $displayAccessLinks }}
+    {{ range . }}
+      {{ $linkLabel := lower (.label | default "") }}
+      {{ if in (slice "volltext" "material") $linkLabel }}
+        {{ $hasDirectReadableLink = true }}
+      {{ end }}
+      {{ if and $oaURL (eq .url $oaURL) }}
+        {{ $hasOAURLDisplayed = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if and $oaReadable $oaURL (not $hasOAURLDisplayed) (or (not $displayAccessLinks) (and (eq $oaStatus "green") (not $hasDirectReadableLink))) }}
+    {{ $displayAccessLinks = $displayAccessLinks | append (dict "label" "Volltext" "url" $oaURL) }}
+  {{ end }}
+  {{ $showOaStatus := and $oaStatus (ne $oaStatus "unknown") }}
+  {{ $hasDoiAccessLink := false }}
+  {{ with $displayAccessLinks }}
+    {{ range . }}
+      {{ if eq (lower (.label | default "")) "doi" }}
+        {{ $hasDoiAccessLink = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $hasMain := or .Params.abstract .Content }}
+
+  <article class="wrap publication-detail">
+    <header class="publication-hero">
+      <p class="publication-kicker">
+        <span>Publikation</span>
+        {{ with $publicationType }}<span>{{ . }}</span>{{ end }}
+        {{ with .Params.year }}<span>{{ . }}</span>{{ end }}
+      </p>
+      <h1>{{ $displayTitle }}</h1>
+      {{ with .Params.subtitle }}<p class="publication-subtitle">{{ . }}</p>{{ end }}
+
+      <div class="publication-identity">
+        {{ with .Params.authors }}<p class="people">{{ delimit . "; " }}</p>{{ end }}
+        {{ with .Params.source }}<p>{{ . }}</p>{{ end }}
+      </div>
+
+    </header>
+
+    <div class="publication-layout{{ if not $hasMain }} publication-layout-single{{ end }}">
+      {{ if $hasMain }}
+      <div class="publication-main" aria-label="Inhalt">
+        {{ with .Params.abstract }}
+          <section class="publication-section">
+            <h2>Abstract</h2>
+            <div class="article-body">
+              {{ . | markdownify }}
+            </div>
+          </section>
+        {{ end }}
+        {{ with .Content }}
+          <section class="publication-section">
+            {{ if $.Params.abstract }}<h2>Anmerkungen</h2>{{ end }}
+            <div class="article-body">
+              {{ . }}
+            </div>
+          </section>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <aside class="publication-side" aria-label="Zugriff und Zitieren">
+        {{ with $displayAccessLinks }}
+          <section class="publication-panel publication-access-panel">
+            <h2>Zugriff</h2>
+            <div class="access-links">
+              {{ if and $showOaStatus (not $hasDoiAccessLink) }}
+                <div class="open-access-summary oa-status-{{ $oaStatus | urlize }}">
+                  <span class="open-access-marker oa-status-{{ $oaStatus | urlize }}">{{ $oaLabel }}</span>
+                  <span>{{ $oaDescription }}</span>
+                </div>
+              {{ end }}
+              <ul>
+                {{ range . }}
+                  {{ $linkLabel := .label | default .url }}
+                  {{ $isDoiLink := eq (lower $linkLabel) "doi" }}
+                  {{ $displayLinkLabel := $linkLabel }}
+                  {{ if and $isDoiLink $doiText }}
+                    {{ $displayLinkLabel = printf "DOI: %s" $doiText }}
+                  {{ end }}
+                  <li class="{{ if and $showOaStatus $isDoiLink }}has-open-access-status{{ end }}">
+                    <a href="{{ .url }}" class="{{ if and $isDoiLink $oaReadable }}is-readable-open-access{{ end }}">
+                      <span class="access-link-main">
+                        {{ if and $isDoiLink $oaReadable }}
+                          {{ partial "open-access-icon.html" (dict "Class" "access-open-icon") }}
+                        {{ end }}
+                        <span class="access-link-label{{ if $isDoiLink }} access-link-label-doi{{ end }}">{{ $displayLinkLabel }}</span>
+                      </span>
+                      {{ if and $showOaStatus $isDoiLink }}
+                        <span class="open-access-marker oa-status-{{ $oaStatus | urlize }}">{{ $oaButtonLabel }}</span>
+                      {{ end }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+              {{ if and $showOaStatus $hasDoiAccessLink }}
+                <p class="open-access-note">{{ $oaNoteText }}{{ if $oaReadable }}{{ with $oaMeta }} <span>{{ delimit . " · " }}</span>{{ end }}{{ end }}</p>
+              {{ else if and $showOaStatus $oaReadable (not $hasDoiAccessLink) $oaMeta }}
+                <p class="open-access-note"><span>{{ delimit $oaMeta " · " }}</span></p>
+              {{ end }}
+            </div>
+          </section>
+        {{ end }}
+
+        {{ with $citationItems }}
+          <section class="publication-panel publication-citation-panel">
+            <h2>Zitieren</h2>
+            <div class="citation-tool">
+              <div class="citation-tool-header">
+                <h3>Zitationsstil</h3>
+              </div>
+              <div class="citation-tabs" role="radiogroup" aria-label="Zitationsstil wählen">
+                {{ range $index, $item := . }}
+                  {{ $citationId := printf "citation-text-%d" $index }}
+                  {{ $controlID := printf "citation-style-%d" $index }}
+                  <input class="citation-tab-input" id="{{ $controlID }}" type="radio" name="citation-style"{{ if eq $index 0 }} checked{{ end }}>
+                  <label class="citation-tab" for="{{ $controlID }}">{{ $item.label }}</label>
+                  <div class="citation-panel-content">
+                    <div class="citation-panel-actions">
+                      <button class="copy-button" type="button" data-copy-target="{{ $citationId }}" hidden>Kopieren</button>
+                    </div>
+                    {{ if $item.code }}
+                      <pre id="{{ $citationId }}"><code>{{ $item.text }}</code></pre>
+                    {{ else }}
+                      <p id="{{ $citationId }}">{{ $item.text }}</p>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          </section>
+        {{ end }}
+      </aside>
+    </div>
+  </article>
+{{ end }}

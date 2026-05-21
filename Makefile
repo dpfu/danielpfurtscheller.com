@@ -1,11 +1,16 @@
-# Standard-Target, das den Inhalt von src nach dist kopiert
-all: dist
+.PHONY: all build server clean test
 
-# Erstellt (falls nötig) den dist-Ordner und kopiert alle Dateien
-dist:
-	mkdir -p dist
-	cp -r src/* dist/
+all: build
 
-# Optionales Target zum Aufräumen, wenn man z. B. den dist-Ordner löschen möchte
+build:
+	hugo --gc --minify --cleanDestinationDir
+
+server:
+	hugo server --bind 127.0.0.1 --port 1313 --disableFastRender
+
 clean:
-	rm -rf dist
+	rm -rf public
+
+test:
+	hugo --gc --minify --cleanDestinationDir --printPathWarnings --printUnusedTemplates --panicOnWarning
+	git diff --check

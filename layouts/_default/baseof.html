@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode | default "de" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body data-section="{{ if .IsHome }}home{{ else }}{{ .Section | default .Type | default "page" }}{{ end }}">
+    <a class="skip-link" href="#content">Zum Inhalt springen</a>
+    {{ partial "site-header.html" . }}
+    <main id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "site-footer.html" . }}
+    {{ $needsSiteJS := or (eq .Section "publications") (and (eq .Section "talks") .IsSection) }}
+    {{ if $needsSiteJS }}
+      {{ with resources.Get "js/site.js" }}
+        {{ $siteJS := . | fingerprint }}
+        <script src="{{ $siteJS.RelPermalink }}" integrity="{{ $siteJS.Data.Integrity }}" defer></script>
+      {{ end }}
+    {{ end }}
+  </body>
+</html>

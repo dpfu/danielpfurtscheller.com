@@ -1,0 +1,30 @@
+{{ $slides := .Slides }}
+{{ $id := .ID | default "photo-hero-title" }}
+{{ $captionKicker := .CaptionKicker | default "Aufnahme" }}
+{{ if $slides }}
+  <section class="photo-hero{{ with .Class }} {{ . }}{{ end }}" aria-labelledby="{{ $id }}">
+    <div class="photo-hero-media" aria-hidden="true" style="--slide-count: {{ len $slides }};">
+      {{ range $index, $slide := $slides }}
+        <img
+          src="{{ $slide.src }}"
+          alt=""
+          decoding="async"
+          style="--slide-index: {{ $index }}; object-position: {{ $slide.position | default "center center" }};"
+        >
+      {{ end }}
+    </div>
+    <div class="photo-hero-context" aria-hidden="true" style="--slide-count: {{ len $slides }};">
+      <span class="photo-hero-captions">
+        {{ range $index, $slide := $slides }}
+          <span class="photo-hero-caption" style="--slide-index: {{ $index }};">{{ $slide.caption }}</span>
+        {{ end }}
+      </span>
+    </div>
+    <div class="wrap photo-hero-content">
+      {{ with .Eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1 id="{{ $id }}">{{ .Title }}</h1>
+      {{ with .Subtitle }}<p class="photo-hero-tagline">{{ . }}</p>{{ end }}
+      {{ with .Intro }}<p class="intro-text">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+{{ end }}

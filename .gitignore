@@ -1,1 +1,33 @@
 .DS_Store
+public/
+resources/
+.hugo_build.lock
+.netlify/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local private tooling
+.codex/
+.agents/
+.cursor/
+.continue/
+.windsurf/
+.aider*
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+*.prompt.md
+*.prompts.md
+*.session.md
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+__pycache__/
+*.py[cod]

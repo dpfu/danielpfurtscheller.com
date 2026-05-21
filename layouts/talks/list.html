@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="wrap page wide-page talks-page overview-page">
+    <h1 class="sr-only">{{ .Title }}</h1>
+
+    {{ with site.Params.upcomingTalks }}
+      <section class="plain-section overview-note">
+        <h2>Kommende Vorträge</h2>
+        <div class="plain-list">
+          {{ range . }}
+            <p><strong>{{ .title }}</strong>{{ with .date }} — {{ . }}{{ end }}{{ with .note }}. {{ . }}{{ end }}</p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{ partial "section-list.html" . }}
+  </div>
+{{ end }}

@@ -1,0 +1,15 @@
+{{ $filterID := printf "%s-filter" .Section }}
+{{ $filterLabel := cond (eq .Section "talks") "Vorträge filtern" "Publikationen filtern" }}
+<div class="catalog-tools">
+  <label for="{{ $filterID }}">{{ $filterLabel }}</label>
+  <div class="catalog-filter-control">
+    <input id="{{ $filterID }}" type="search" data-filter placeholder="Titel, Jahr, Person oder Thema" autocomplete="off">
+    <output for="{{ $filterID }}" hidden></output>
+  </div>
+</div>
+
+<div class="catalog-list">
+  {{ range .Pages.ByDate.Reverse }}
+    {{ partial "catalog-entry.html" . }}
+  {{ end }}
+</div>
