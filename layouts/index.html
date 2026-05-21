@@ -27,9 +27,9 @@
 
       <aside class="side-column">
         <section>
-          <h2 class="area-header">Publikationen</h2>
+          <h2 class="area-header">Neueste Publikationen</h2>
           <div class="compact-list">
-            {{ range first 7 (where site.RegularPages.ByDate.Reverse "Section" "publications") }}
+            {{ range first 3 (where site.RegularPages.ByDate.Reverse "Section" "publications") }}
               <article>
                 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                 <p>{{ with .Params.source }}{{ . }}{{ else }}{{ .Params.entry_type }}{{ end }}</p>
@@ -38,18 +38,6 @@
             {{ end }}
           </div>
           <p class="more-link"><a href="{{ "publications/" | relURL }}">Mehr Publikationen</a></p>
-        </section>
-
-        <section>
-          <h2 class="area-header">Ressourcen</h2>
-          <ul class="resource-list">
-            <li><a href="{{ "talks/" | relURL }}">Vorträge</a> — Konferenzbeiträge, Workshops und öffentliche Präsentationen</li>
-            <li><a href="{{ "publications/" | relURL }}">In Vorbereitung</a> — Manuskripte und Arbeiten vor Erscheinen</li>
-            <li><a href="{{ "software/" | relURL }}">Software</a> — Werkzeuge, Skripte und zitierbare Materialien</li>
-            <li>{{ partial "icon-link.html" (dict "Icon" "scholar" "Label" "Google Scholar" "URL" site.Params.googleScholar "Class" "resource-icon-link") }} — Publikationsprofil</li>
-            <li>{{ partial "icon-link.html" (dict "Icon" "orcid" "Label" "ORCID" "URL" site.Params.orcid "Class" "resource-icon-link") }} — Forschungsprofil</li>
-            <li>{{ partial "icon-link.html" (dict "Icon" "rss" "Label" "RSS" "URL" ("index.xml" | relURL) "Class" "resource-icon-link") }} — Feed für neue Inhalte</li>
-          </ul>
         </section>
       </aside>
   </div>

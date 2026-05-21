@@ -3,6 +3,7 @@
 all: build
 
 build:
+	rm -rf public
 	hugo --gc --minify --cleanDestinationDir
 
 server:
@@ -12,5 +13,6 @@ clean:
 	rm -rf public
 
 test:
+	rm -rf public
 	hugo --gc --minify --cleanDestinationDir --printPathWarnings --printUnusedTemplates --panicOnWarning
 	git diff --check

@@ -36,7 +36,7 @@ The repository also keeps a GitHub Actions check workflow for the same build/tes
 
 ## Content
 
-Publications, talks, posts, and software entries are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention.
+Publications, talks, and posts are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention.
 
 ### Zotero publication checks
 
