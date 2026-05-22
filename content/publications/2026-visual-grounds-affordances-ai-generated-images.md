@@ -20,8 +20,6 @@ links:
   url: https://doi.org/10.1201/9781003740261-4
 - label: Verlag
   url: https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003740261-4/exploring-visual-grounds-affordances-ai-generated-images-multimodal-walkthroughs-daniel-pfurtscheller-katharina-christ
-short_title: On Exploring the Visual Grounds
-subtitle: Affordances of AI-Generated Images Through Multimodal Walkthroughs
 doi: 10.1201/9781003740261-4
 open_access:
   status: open
