@@ -6,22 +6,12 @@
 {{ $titleLinks := true }}
 {{ $displayTitle := .Params.short_title | default .Title }}
 {{ $summary := "" }}
-{{ $openAccessSearch := "" }}
+{{ $openAccess := partial "publication-open-access.html" . }}
+{{ $openAccessSearch := $openAccess.search_text }}
 {{ with $people }}{{ $peopleText = delimit . " " }}{{ end }}
 {{ if ne .Section "talks" }}
   {{ with .Params.abstract }}{{ $summary = . }}{{ end }}
   {{ if not $summary }}{{ with .Description }}{{ $summary = . }}{{ end }}{{ end }}
-  {{ with .Params.open_access }}
-    {{ $status := "" }}
-    {{ if reflect.IsMap . }}
-      {{ with (or .status .oa_status) }}{{ $status = printf "%v" . | lower }}{{ end }}
-    {{ else }}
-      {{ $status = printf "%v" . | lower }}
-    {{ end }}
-    {{ if in (slice "gold" "hybrid" "green" "bronze" "open") $status }}
-      {{ $openAccessSearch = "Open Access frei lesbar" }}
-    {{ end }}
-  {{ end }}
 {{ end }}
 {{ with .CurrentSection }}
   {{ if isset .Params "catalog_title_links" }}
@@ -53,14 +43,18 @@
       {{ if $titleLinks }}<p class="entry-actions"><a class="overview-more" href="{{ .RelPermalink }}">Mehr</a></p>{{ end }}
     {{ end }}
     {{ if eq .Section "talks" }}
+      {{ $talkLinks := slice }}
       {{ with .Params.links }}
+        {{ range . }}
+          {{ if and .url (ne .label "Weblink") }}
+            {{ $talkLinks = $talkLinks | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ with $talkLinks }}
         <p class="resource-links entry-actions">
           {{ range . }}
-            {{ $label := .label }}
-            {{ if eq $label "Weblink" }}
-              {{ $label = "Nachweis" }}
-            {{ end }}
-            <a href="{{ .url }}">{{ $label }}</a>
+            <a href="{{ .url }}">{{ .label }}</a>
           {{ end }}
         </p>
       {{ end }}

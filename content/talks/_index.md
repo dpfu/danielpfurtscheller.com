@@ -13,4 +13,4 @@ cascade:
       render: never
 ---
 
-Kommende Termine und ein Archiv früherer Vorträge, Workshops und Präsentationen. Die Einträge bündeln Thema, Anlass, Ort und, wo vorhanden, einen externen Nachweis.
+Kommende Termine und ein Archiv früherer Vorträge, Workshops und Präsentationen. Die Einträge bündeln Thema, Anlass und Ort.

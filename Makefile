@@ -14,5 +14,6 @@ clean:
 
 test:
 	rm -rf public
+	ruby scripts/check_content.rb
 	hugo --gc --minify --cleanDestinationDir --printPathWarnings --printUnusedTemplates --panicOnWarning
 	git diff --check

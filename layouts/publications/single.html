@@ -18,6 +18,7 @@
   {{ $displayTitle := .Params.short_title | default .Title }}
   {{ $doiText := "" }}
   {{ with .Params.doi }}{{ $doiText = printf "%v" . }}{{ end }}
+  {{ $openAccess := partial "publication-open-access.html" . }}
 
   {{ $linksParam := .Params.links }}
   {{ $accessLinks := .Params.access_links }}
@@ -38,55 +39,15 @@
     {{ end }}
   {{ end }}
 
-  {{ $openAccess := .Params.open_access }}
-  {{ $oaStatus := "" }}
-  {{ $oaSource := "" }}
-  {{ $oaChecked := "" }}
-  {{ $oaLicense := "" }}
-  {{ $oaURL := "" }}
-  {{ if reflect.IsMap $openAccess }}
-    {{ with (or $openAccess.status $openAccess.oa_status) }}
-      {{ $oaStatus = printf "%v" . | lower }}
-    {{ end }}
-    {{ with $openAccess.source }}{{ $oaSource = . }}{{ end }}
-    {{ with $openAccess.checked }}{{ $oaChecked = . }}{{ end }}
-    {{ with $openAccess.license }}{{ $oaLicense = . }}{{ end }}
-    {{ with $openAccess.url }}{{ $oaURL = . }}{{ end }}
-  {{ else }}
-    {{ with $openAccess }}{{ $oaStatus = printf "%v" . | lower }}{{ end }}
-  {{ end }}
-  {{ $oaLabels := dict
-    "gold" "Gold OA"
-    "hybrid" "Hybrid OA"
-    "green" "Green OA"
-    "bronze" "Bronze OA"
-    "open" "Open Access"
-    "closed" "Kein OA"
-    "unknown" ""
-  }}
-  {{ $oaDescriptions := dict
-    "gold" "Freier Zugang im Open-Access-Journal."
-    "hybrid" "Freier Zugang beim Verlag."
-    "green" "Freier Zugang über ein Repositorium."
-    "bronze" "Frei lesbar, Lizenz nicht eindeutig."
-    "open" "Freier Zugang nachgewiesen."
-    "closed" "Kein Open Access."
-    "unknown" ""
-  }}
-  {{ $oaLabel := index $oaLabels $oaStatus | default "OA-Status" }}
-  {{ $oaDescription := index $oaDescriptions $oaStatus | default "Open-Access-Status erfasst." }}
-  {{ $oaMeta := slice }}
-  {{ with $oaSource }}{{ $oaMeta = $oaMeta | append (printf "Quelle: %s" .) }}{{ end }}
-  {{ with $oaLicense }}{{ $oaMeta = $oaMeta | append (printf "Lizenz: %s" (replace (upper .) "-" " ")) }}{{ end }}
-  {{ with $oaChecked }}{{ $oaMeta = $oaMeta | append (printf "Stand: %s" .) }}{{ end }}
-  {{ $readableStatuses := slice "gold" "hybrid" "green" "bronze" "open" }}
-  {{ $oaReadable := in $readableStatuses $oaStatus }}
-  {{ $oaButtonLabel := $oaLabel }}
-  {{ if $oaReadable }}{{ $oaButtonLabel = "Frei lesbar" }}{{ end }}
-  {{ $oaNoteText := $oaDescription }}
-  {{ if and $oaReadable (ne $oaLabel "Open Access") }}
-    {{ $oaNoteText = printf "%s: %s" $oaLabel $oaDescription }}
-  {{ end }}
+  {{ $oaStatus := $openAccess.status }}
+  {{ $oaURL := $openAccess.url }}
+  {{ $oaLabel := $openAccess.label }}
+  {{ $oaDescription := $openAccess.description }}
+  {{ $oaMeta := $openAccess.meta }}
+  {{ $oaReadable := $openAccess.readable }}
+  {{ $oaButtonLabel := $openAccess.button_label }}
+  {{ $oaNoteText := $openAccess.note_text }}
+  {{ $showOaStatus := $openAccess.show }}
   {{ $hasDirectReadableLink := false }}
   {{ $hasOAURLDisplayed := false }}
   {{ with $displayAccessLinks }}
@@ -103,7 +64,6 @@
   {{ if and $oaReadable $oaURL (not $hasOAURLDisplayed) (or (not $displayAccessLinks) (and (eq $oaStatus "green") (not $hasDirectReadableLink))) }}
     {{ $displayAccessLinks = $displayAccessLinks | append (dict "label" "Volltext" "url" $oaURL) }}
   {{ end }}
-  {{ $showOaStatus := and $oaStatus (ne $oaStatus "unknown") }}
   {{ $hasDoiAccessLink := false }}
   {{ with $displayAccessLinks }}
     {{ range . }}

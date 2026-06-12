@@ -4,21 +4,26 @@
       <span class="brand-full" aria-hidden="true">Daniel Pfurtscheller</span>
       <span class="brand-short" aria-hidden="true">Pfurtscheller</span>
     </a>
-    <nav class="main-nav" aria-label="Hauptnavigation">
-      {{ range site.Menus.main }}
-        <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
-      {{ end }}
-    </nav>
-    <details class="mobile-nav">
-      <summary>
-        <span class="menu-icon" aria-hidden="true"></span>
-        <span class="sr-only">Menü</span>
-      </summary>
-      <nav class="mobile-nav-panel" aria-label="Mobile Hauptnavigation">
+    <div class="nav-actions">
+      <nav class="main-nav" aria-label="Hauptnavigation">
         {{ range site.Menus.main }}
           <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
         {{ end }}
       </nav>
-    </details>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Farbschema wechseln" aria-pressed="false">
+        <span class="theme-toggle-thumb" aria-hidden="true"></span>
+      </button>
+      <details class="mobile-nav">
+        <summary>
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span class="sr-only">Menü</span>
+        </summary>
+        <nav class="mobile-nav-panel" aria-label="Mobile Hauptnavigation">
+          {{ range site.Menus.main }}
+            <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
+          {{ end }}
+        </nav>
+      </details>
+    </div>
   </div>
 </header>

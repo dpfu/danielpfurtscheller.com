@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ $heroSlides := site.Data.talk_images.hero }}
+  {{ $heroSlides := hugo.Data.talk_images.hero }}
   {{ if $heroSlides }}
     {{ partial "photo-hero.html" (dict
       "ID" "home-title"

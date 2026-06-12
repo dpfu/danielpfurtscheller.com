@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.Language.LanguageCode | default "de" }}">
+<html lang="{{ site.Language.Locale | default "de" }}">
   <head>
     {{ partial "head.html" . }}
   </head>
@@ -10,12 +10,9 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "site-footer.html" . }}
-    {{ $needsSiteJS := or (eq .Section "publications") (and (eq .Section "talks") .IsSection) }}
-    {{ if $needsSiteJS }}
-      {{ with resources.Get "js/site.js" }}
-        {{ $siteJS := . | fingerprint }}
-        <script src="{{ $siteJS.RelPermalink }}" integrity="{{ $siteJS.Data.Integrity }}" defer></script>
-      {{ end }}
+    {{ with resources.Get "js/site.js" }}
+      {{ $siteJS := . | fingerprint }}
+      <script src="{{ $siteJS.RelPermalink }}" integrity="{{ $siteJS.Data.Integrity }}" defer></script>
     {{ end }}
   </body>
 </html>

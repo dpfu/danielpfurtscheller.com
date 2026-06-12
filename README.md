@@ -16,6 +16,9 @@ Run the local checks with:
 make test
 ```
 
+The test target validates curated frontmatter, builds Hugo with warnings treated
+as failures, and checks whitespace.
+
 Add a post with:
 
 ```sh
@@ -36,7 +39,7 @@ The repository also keeps a GitHub Actions check workflow for the same build/tes
 
 ## Content
 
-Publications, talks, and posts are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention.
+Publications, talks, and posts are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention. Short-lived homepage highlights such as working papers and upcoming talks live in `data/highlights.yaml`.
 
 ### Zotero publication checks
 

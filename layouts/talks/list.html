@@ -2,7 +2,7 @@
   <div class="wrap page wide-page talks-page overview-page">
     <h1 class="sr-only">{{ .Title }}</h1>
 
-    {{ with site.Params.upcomingTalks }}
+    {{ with hugo.Data.highlights.upcoming_talks }}
       <section class="plain-section overview-note">
         <h2>Kommende Vorträge</h2>
         <div class="plain-list">

@@ -1,4 +1,55 @@
 (function() {
+  const toggle = document.querySelector('[data-theme-toggle]');
+  if (!toggle) return;
+
+  const root = document.documentElement;
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function getStoredTheme() {
+    try {
+      const theme = window.localStorage.getItem('theme');
+      return theme === 'light' || theme === 'dark' ? theme : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function getActiveTheme() {
+    return root.dataset.theme || (media.matches ? 'dark' : 'light');
+  }
+
+  function updateToggle() {
+    const isDark = getActiveTheme() === 'dark';
+    toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isDark ? 'Helles Farbschema aktivieren' : 'Dunkles Farbschema aktivieren');
+  }
+
+  toggle.addEventListener('click', function() {
+    const theme = getActiveTheme() === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = theme;
+
+    try {
+      window.localStorage.setItem('theme', theme);
+    } catch (error) {
+      // Persisting is optional; the current page can still switch theme.
+    }
+
+    updateToggle();
+  });
+
+  if (typeof media.addEventListener === 'function') {
+    media.addEventListener('change', function() {
+      if (!getStoredTheme()) {
+        delete root.dataset.theme;
+        updateToggle();
+      }
+    });
+  }
+
+  updateToggle();
+}());
+
+(function() {
   const input = document.querySelector('[data-filter]');
   if (!input) return;
 

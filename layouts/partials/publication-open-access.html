@@ -1,0 +1,74 @@
+{{ $openAccess := .Params.open_access }}
+{{ $status := "" }}
+{{ $source := "" }}
+{{ $checked := "" }}
+{{ $license := "" }}
+{{ $url := "" }}
+
+{{ if reflect.IsMap $openAccess }}
+  {{ with (or $openAccess.status $openAccess.oa_status) }}
+    {{ $status = printf "%v" . | lower }}
+  {{ end }}
+  {{ with $openAccess.source }}{{ $source = . }}{{ end }}
+  {{ with $openAccess.checked }}{{ $checked = . }}{{ end }}
+  {{ with $openAccess.license }}{{ $license = . }}{{ end }}
+  {{ with $openAccess.url }}{{ $url = . }}{{ end }}
+{{ else }}
+  {{ with $openAccess }}{{ $status = printf "%v" . | lower }}{{ end }}
+{{ end }}
+
+{{ $labels := dict
+  "gold" "Gold OA"
+  "hybrid" "Hybrid OA"
+  "green" "Green OA"
+  "bronze" "Bronze OA"
+  "open" "Open Access"
+  "closed" "Kein OA"
+  "unknown" ""
+}}
+{{ $descriptions := dict
+  "gold" "Freier Zugang im Open-Access-Journal."
+  "hybrid" "Freier Zugang beim Verlag."
+  "green" "Freier Zugang über ein Repositorium."
+  "bronze" "Frei lesbar, Lizenz nicht eindeutig."
+  "open" "Freier Zugang nachgewiesen."
+  "closed" "Kein Open Access."
+  "unknown" ""
+}}
+{{ $readableStatuses := slice "gold" "hybrid" "green" "bronze" "open" }}
+{{ $readable := in $readableStatuses $status }}
+{{ $show := and (ne $status "") (ne $status "unknown") }}
+{{ $label := index $labels $status | default "OA-Status" }}
+{{ $description := index $descriptions $status | default "Open-Access-Status erfasst." }}
+{{ $meta := slice }}
+{{ with $source }}{{ $meta = $meta | append (printf "Quelle: %s" .) }}{{ end }}
+{{ with $license }}{{ $meta = $meta | append (printf "Lizenz: %s" (replace (upper .) "-" " ")) }}{{ end }}
+{{ with $checked }}{{ $meta = $meta | append (printf "Stand: %s" .) }}{{ end }}
+{{ $buttonLabel := $label }}
+{{ if $readable }}{{ $buttonLabel = "Frei lesbar" }}{{ end }}
+{{ $noteText := $description }}
+{{ if and $readable (ne $label "Open Access") }}
+  {{ $noteText = printf "%s: %s" $label $description }}
+{{ end }}
+{{ $doiURL := "" }}
+{{ with .Params.doi }}{{ $doiURL = printf "https://doi.org/%v" . }}{{ end }}
+{{ $pillURL := $url | default $doiURL | default .RelPermalink }}
+{{ $searchText := "" }}
+{{ if $readable }}{{ $searchText = "Open Access frei lesbar" }}{{ end }}
+
+{{ return (dict
+  "status" $status
+  "source" $source
+  "checked" $checked
+  "license" $license
+  "url" $url
+  "label" $label
+  "description" $description
+  "meta" $meta
+  "readable" $readable
+  "show" $show
+  "button_label" $buttonLabel
+  "note_text" $noteText
+  "pill_url" $pillURL
+  "search_text" $searchText
+) }}

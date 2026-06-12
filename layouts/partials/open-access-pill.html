@@ -1,20 +1,6 @@
-{{ $openAccess := .Params.open_access }}
-{{ $oaStatus := "" }}
-{{ $oaURL := "" }}
-{{ if reflect.IsMap $openAccess }}
-  {{ with (or $openAccess.status $openAccess.oa_status) }}
-    {{ $oaStatus = printf "%v" . | lower }}
-  {{ end }}
-  {{ with $openAccess.url }}{{ $oaURL = . }}{{ end }}
-{{ else }}
-  {{ with $openAccess }}{{ $oaStatus = printf "%v" . | lower }}{{ end }}
-{{ end }}
-{{ $doiURL := "" }}
-{{ with .Params.doi }}{{ $doiURL = printf "https://doi.org/%v" . }}{{ end }}
-{{ $pillURL := $oaURL | default $doiURL | default .RelPermalink }}
-{{ $readableStatuses := slice "gold" "hybrid" "green" "bronze" "open" }}
-{{ if in $readableStatuses $oaStatus }}
-  <a class="open-access-pill" href="{{ $pillURL }}" aria-label="Open Access: {{ .Title }}">
+{{ $openAccess := partial "publication-open-access.html" . }}
+{{ if $openAccess.readable }}
+  <a class="open-access-pill" href="{{ $openAccess.pill_url }}" aria-label="Open Access: {{ .Title }}">
     {{ partial "open-access-icon.html" (dict "Class" "open-access-pill-icon") }}
     <span>Open Access</span>
     {{ partial "external-link-icon.html" (dict "Class" "open-access-pill-external") }}
