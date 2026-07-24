@@ -16,29 +16,17 @@
     </section>
   {{ end }}
 
-  <div class="wrap home-grid" aria-label="Aktuelle Inhalte">
-      <div class="main-column">
-        <h2 class="area-header">Posts</h2>
-        {{ range first 4 (where site.RegularPages.ByDate.Reverse "Section" "posts") }}
-          {{ partial "post-summary.html" . }}
-        {{ end }}
-        <p class="more-link"><a href="{{ "posts/" | relURL }}">Mehr Posts</a></p>
-      </div>
-
-      <aside class="side-column">
-        <section>
-          <h2 class="area-header">Neueste Publikationen</h2>
-          <div class="compact-list">
-            {{ range first 3 (where site.RegularPages.ByDate.Reverse "Section" "publications") }}
-              <article>
-                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                <p>{{ with .Params.source }}{{ . }}{{ else }}{{ .Params.entry_type }}{{ end }}</p>
-                {{ partial "open-access-pill.html" . }}
-              </article>
-            {{ end }}
-          </div>
-          <p class="more-link"><a href="{{ "publications/" | relURL }}">Mehr Publikationen</a></p>
-        </section>
-      </aside>
-  </div>
+  <section class="wrap" aria-labelledby="latest-publications-title">
+    <h2 class="area-header" id="latest-publications-title">Neueste Publikationen</h2>
+    <div class="compact-list">
+      {{ range first 3 (where site.RegularPages.ByDate.Reverse "Section" "publications") }}
+        <article>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ with .Params.source }}{{ . }}{{ else }}{{ .Params.entry_type }}{{ end }}</p>
+          {{ partial "open-access-pill.html" . }}
+        </article>
+      {{ end }}
+    </div>
+    <p class="more-link"><a href="{{ "publications/" | relURL }}">Mehr Publikationen</a></p>
+  </section>
 {{ end }}

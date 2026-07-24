@@ -137,12 +137,6 @@ def validate_talk(errors, path, data)
   validate_links(errors, path, data["links"])
 end
 
-def validate_post(errors, path, data)
-  require_field(errors, path, data, "title")
-  require_field(errors, path, data, "description")
-  validate_date(errors, path, data)
-end
-
 def content_files(section)
   Dir[File.join(ROOT, "content", section, "*.md")].reject do |path|
     File.basename(path) == "_index.md"
@@ -154,8 +148,7 @@ checked = 0
 
 {
   "publications" => method(:validate_publication),
-  "talks" => method(:validate_talk),
-  "posts" => method(:validate_post)
+  "talks" => method(:validate_talk)
 }.each do |section, validator|
   content_files(section).each do |path|
     checked += 1

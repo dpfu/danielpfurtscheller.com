@@ -15,7 +15,6 @@ disableKinds:
 outputs:
   home:
     - HTML
-    - RSS
 
 markup:
   goldmark:
@@ -26,26 +25,23 @@ markup:
 
 menus:
   main:
-    - name: "Posts"
-      pageRef: "/posts"
-      weight: 10
     - name: "Publikationen"
       pageRef: "/publications"
-      weight: 20
+      weight: 10
     - name: "Vorträge"
       pageRef: "/talks"
-      weight: 30
+      weight: 20
     - name: "Über mich"
       url: "/#about"
-      weight: 50
+      weight: 30
 
 params:
   author: "Daniel Pfurtscheller"
   affiliation: "Germanistische Medienwissenschaft · Universität Innsbruck"
-  description: "Akademisches Portfolio von Daniel Pfurtscheller: Germanistische Medienwissenschaft, Posts, Publikationen und Vorträge."
+  description: "Akademisches Portfolio von Daniel Pfurtscheller: Germanistische Medienwissenschaft, Publikationen und Vorträge."
   heroTitle: "Hi, ich bin Daniel Pfurtscheller."
   intro: "Mich interessiert, wie wir in und mit Medien kommunizieren: mit Sprache, Bildern und dem ganzen Drumherum."
-  about: "Assistenzprofessor für Germanistische Medienwissenschaft an der Universität Innsbruck. Meine Forschung verbindet Medienwissenschaft, multimodale Analyse und linguistisch informierte Diskursforschung. Diese Seite sammelt Posts, Publikationen und Vorträge."
+  about: "Assistenzprofessor für Germanistische Medienwissenschaft an der Universität Innsbruck. Meine Forschung verbindet Medienwissenschaft, multimodale Analyse und linguistisch informierte Diskursforschung. Diese Seite dokumentiert Publikationen, laufende Arbeiten und Vorträge."
   email: "daniel.pfurtscheller@uibk.ac.at"
   bluesky: "https://bsky.app/profile/dpfu.bsky.social"
   linkedin: "https://www.linkedin.com/in/daniel-pfurtscheller"

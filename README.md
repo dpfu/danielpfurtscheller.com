@@ -19,12 +19,6 @@ make test
 The test target validates curated frontmatter, builds Hugo with warnings treated
 as failures, and checks whitespace.
 
-Add a post with:
-
-```sh
-hugo new posts/my-post.md
-```
-
 ## Deployment
 
 The production site is deployed on Netlify. The Netlify build uses `netlify.toml`, runs `make build`, and publishes `public/`.
@@ -39,7 +33,7 @@ The repository also keeps a GitHub Actions check workflow for the same build/tes
 
 ## Content
 
-Publications, talks, and posts are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention. Short-lived homepage highlights such as working papers and upcoming talks live in `data/highlights.yaml`.
+Publications and talks are curated directly as Markdown files in `content/`. Section landing pages use Hugo's `_index.md` convention. Short-lived homepage highlights such as working papers and upcoming talks live in `data/highlights.yaml`.
 
 ### Zotero publication checks
 
