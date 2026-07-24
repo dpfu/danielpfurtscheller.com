@@ -1,18 +1,23 @@
 {{ define "main" }}
   <div class="wrap page wide-page overview-page">
-    <h1 class="sr-only">{{ .Title }}</h1>
+    <header class="catalog-page-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}<div class="catalog-page-intro">{{ . }}</div>{{ end }}
+    </header>
 
     {{ with hugo.Data.highlights.working_papers }}
-      <section class="plain-section overview-note">
-        <h2>In Vorbereitung</h2>
-        <div class="plain-list">
+      <section class="catalog-featured" aria-labelledby="forthcoming-publications-title">
+        <h2 id="forthcoming-publications-title">Im Erscheinen und in Vorbereitung</h2>
+        <div class="featured-publications-list">
           {{ range . }}
-            <div class="plain-list-item">
-              <p><strong>{{ .title }}</strong></p>
-              {{ with .authors }}<p>{{ . }}</p>{{ end }}
-              {{ with .affiliation }}<p>{{ . }}</p>{{ end }}
-              {{ with .note }}<p>{{ . }}</p>{{ end }}
-            </div>
+            <article class="featured-publication">
+              <h3>{{ .title }}</h3>
+              {{ with .authors }}<p class="featured-byline">{{ . }}</p>{{ end }}
+              {{ with .note }}<p class="featured-context">{{ . }}</p>{{ end }}
+              {{ with .doi }}
+                <p class="featured-actions"><a href="https://doi.org/{{ . }}">DOI {{ . }}</a></p>
+              {{ end }}
+            </article>
           {{ end }}
         </div>
       </section>

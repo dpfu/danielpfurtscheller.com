@@ -1,13 +1,22 @@
 {{ define "main" }}
   <div class="wrap page wide-page talks-page overview-page">
-    <h1 class="sr-only">{{ .Title }}</h1>
+    <header class="catalog-page-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}<div class="catalog-page-intro">{{ . }}</div>{{ end }}
+    </header>
 
     {{ with hugo.Data.highlights.upcoming_talks }}
-      <section class="plain-section overview-note">
-        <h2>Kommende Vorträge</h2>
-        <div class="plain-list">
+      <section class="catalog-featured" aria-labelledby="upcoming-talks-title">
+        <h2 id="upcoming-talks-title">Kommende Vorträge</h2>
+        <div class="featured-talks-list">
           {{ range . }}
-            <p><strong>{{ .title }}</strong>{{ with .date }} — {{ . }}{{ end }}{{ with .note }}. {{ . }}{{ end }}</p>
+            <article class="featured-talk">
+              {{ with .date }}<p class="featured-date">{{ . }}</p>{{ end }}
+              <div>
+                <h3>{{ .title }}</h3>
+                {{ with .note }}<p class="featured-context">{{ . }}</p>{{ end }}
+              </div>
+            </article>
           {{ end }}
         </div>
       </section>
