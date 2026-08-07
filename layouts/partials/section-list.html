@@ -1,24 +1,30 @@
-{{ $filterID := printf "%s-filter" .Section }}
 {{ $isTalks := eq .Section "talks" }}
 {{ $archiveTitle := cond $isTalks "Vergangene Vorträge" "Veröffentlichte Publikationen" }}
-{{ $filterLabel := cond $isTalks "Vorträge durchsuchen" "Publikationen durchsuchen" }}
 {{ $archiveID := printf "%s-archive-title" .Section }}
+{{ $groups := .Pages.GroupByDate "2006" "desc" }}
 <section class="catalog-archive" aria-labelledby="{{ $archiveID }}">
   <header class="catalog-section-header">
     <h2 id="{{ $archiveID }}">{{ $archiveTitle }}</h2>
   </header>
 
-  <div class="catalog-tools">
-    <label for="{{ $filterID }}">{{ $filterLabel }}</label>
-    <div class="catalog-filter-control">
-      <input id="{{ $filterID }}" type="search" data-filter placeholder="Titel, Jahr, Person oder Thema" autocomplete="off">
-      <output for="{{ $filterID }}" hidden></output>
-    </div>
-  </div>
+  <nav class="catalog-tools" aria-label="Nach Jahr springen">
+    <p class="catalog-tools-label">Nach Jahr springen</p>
+    <ul class="catalog-year-links">
+      {{ range $groups }}
+        <li><a href="#{{ $.Section }}-{{ .Key }}">{{ .Key }}</a></li>
+      {{ end }}
+    </ul>
+    <p class="catalog-find-hint">Titel, Personen und Themen lassen sich mit der Seitensuche des Browsers finden.</p>
+  </nav>
 
   <div class="catalog-list">
-    {{ range .Pages.ByDate.Reverse }}
-      {{ partial "catalog-entry.html" . }}
+    {{ range $groups }}
+      <section class="catalog-year-group" aria-labelledby="{{ $.Section }}-{{ .Key }}">
+        <h3 class="catalog-year-heading" id="{{ $.Section }}-{{ .Key }}">{{ .Key }}</h3>
+        {{ range .Pages.ByDate.Reverse }}
+          {{ partial "catalog-entry.html" . }}
+        {{ end }}
+      </section>
     {{ end }}
   </div>
 </section>

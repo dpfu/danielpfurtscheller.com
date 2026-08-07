@@ -16,4 +16,5 @@ test:
 	rm -rf public
 	ruby scripts/check_content.rb
 	hugo --gc --minify --cleanDestinationDir --printPathWarnings --printUnusedTemplates --panicOnWarning
+	ruby scripts/check_no_javascript.rb
 	git diff --check

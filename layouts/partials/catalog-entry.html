@@ -2,13 +2,9 @@
 {{ $context := .Params.source | default .Params.event }}
 {{ $place := .Params.place }}
 {{ $entryType := .Params.display_type | default .Params.entry_type }}
-{{ $peopleText := "" }}
 {{ $titleLinks := true }}
 {{ $displayTitle := .Params.short_title | default .Title }}
 {{ $summary := "" }}
-{{ $openAccess := partial "publication-open-access.html" . }}
-{{ $openAccessSearch := $openAccess.search_text }}
-{{ with $people }}{{ $peopleText = delimit . " " }}{{ end }}
 {{ if ne .Section "talks" }}
   {{ with .Params.abstract }}{{ $summary = . }}{{ end }}
   {{ if not $summary }}{{ with .Description }}{{ $summary = . }}{{ end }}{{ end }}
@@ -18,7 +14,7 @@
     {{ $titleLinks = .Params.catalog_title_links }}
   {{ end }}
 {{ end }}
-<article class="catalog-entry" data-entry data-search="{{ delimit (slice .Title .Description .Params.year $entryType $peopleText $context $place .Params.citation $openAccessSearch) " " }}">
+<article class="catalog-entry">
   <div class="entry-meta">
     {{ if eq .Section "talks" }}
       <p class="entry-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (site.Params.dateFormat | default "02.01.2006") }}</time></p>
@@ -31,13 +27,13 @@
     {{ end }}
   </div>
   <div class="entry-body">
-    <h3>
+    <h4>
       {{ if $titleLinks }}
         <a href="{{ .RelPermalink }}">{{ $displayTitle }}</a>
       {{ else }}
         {{ $displayTitle }}
       {{ end }}
-    </h3>
+    </h4>
     {{ if eq .Section "talks" }}
       {{ with $context }}<p>{{ . }}{{ with $place }} · {{ . }}{{ end }}</p>{{ end }}
     {{ else }}

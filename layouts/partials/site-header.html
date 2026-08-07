@@ -10,9 +10,11 @@
           <a href="{{ .URL }}" {{ if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}aria-current="page"{{ end }}>{{ .Name }}</a>
         {{ end }}
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Farbschema wechseln" aria-pressed="false">
+      <input class="theme-toggle-input sr-only" id="theme-toggle" type="checkbox" autocomplete="off">
+      <label class="theme-toggle" for="theme-toggle">
         <span class="theme-toggle-thumb" aria-hidden="true"></span>
-      </button>
+        <span class="sr-only">Farbschema für diese Seite wechseln</span>
+      </label>
       <details class="mobile-nav">
         <summary>
           <span class="menu-icon" aria-hidden="true"></span>
