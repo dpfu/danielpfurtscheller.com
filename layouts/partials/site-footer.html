@@ -4,7 +4,17 @@
       <h2 class="area-header">Über mich</h2>
       <p>{{ site.Params.about }}</p>
     </div>
-    <img class="footer-portrait" src="{{ site.Params.heroImage }}" alt="Porträt von Daniel Pfurtscheller">
+    <img
+      class="footer-portrait"
+      src="{{ site.Params.heroImage }}"
+      srcset="/img/hero/daniel-photo-360.webp 360w, {{ site.Params.heroImage }} 900w"
+      sizes="180px"
+      alt="Porträt von Daniel Pfurtscheller"
+      width="900"
+      height="900"
+      loading="lazy"
+      decoding="async"
+    >
     <div class="contact-list">
       <p>{{ partial "icon-link.html" (dict "Icon" "university" "Label" "Universität Innsbruck" "URL" site.Params.university "Class" "contact-link") }}</p>
       <p>{{ partial "icon-link.html" (dict "Icon" "mail" "Label" site.Params.email "URL" (printf "mailto:%s" site.Params.email) "Class" "contact-link") }}</p>

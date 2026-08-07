@@ -100,6 +100,39 @@ html_files.each do |path|
   end
 end
 
+home_path = File.join(PUBLIC_DIR, "index.html")
+if File.file?(home_path)
+  home = File.read(home_path, encoding: "UTF-8")
+  hero_media = home[/<div\b[^>]*\bphoto-hero-media\b[^>]*>(.*?)<\/div>/mi, 1]
+  if hero_media
+    hero_images = hero_media.scan(/<img\b[^>]*>/i).map { |tag| attributes(tag) }
+    real_sources = hero_images.filter_map { |attrs| attrs["src"] unless attrs["src"].to_s.start_with?("data:") }
+    errors << "public/index.html: mobile hero should load exactly one real image" unless real_sources.length == 1
+    errors << "public/index.html: first hero image must use fetchpriority=high" unless hero_images.first&.fetch("fetchpriority", nil) == "high"
+
+    hero_media.scan(/<source\b[^>]*>/i).each do |tag|
+      attrs = attributes(tag)
+      errors << "public/index.html: slideshow source is not restricted to desktop" unless attrs["media"] == "(min-width: 721px)"
+    end
+  else
+    errors << "public/index.html: photo hero media is missing"
+  end
+
+  footer_portrait = home.scan(/<img\b[^>]*>/i)
+                        .map { |tag| attributes(tag) }
+                        .find { |attrs| attrs.fetch("class", "").split.include?("footer-portrait") }
+  errors << "public/index.html: footer portrait must be lazy-loaded" unless footer_portrait&.fetch("loading", nil) == "lazy"
+  errors << "public/index.html: footer portrait needs its compact responsive source" unless footer_portrait&.fetch("srcset", "")&.include?("daniel-photo-360.webp 360w")
+end
+
+css_files = Dir[File.join(PUBLIC_DIR, "css", "site*.css")]
+if css_files.empty?
+  errors << "public/css: compiled site stylesheet is missing"
+else
+  css = css_files.map { |path| File.read(path, encoding: "UTF-8") }.join
+  errors << "public/css: webfonts must use WOFF2" unless css.include?(".woff2") && !css.include?(".ttf")
+end
+
 rss_path = File.join(PUBLIC_DIR, "publications", "index.xml")
 if File.file?(rss_path)
   rss = File.read(rss_path, encoding: "UTF-8")

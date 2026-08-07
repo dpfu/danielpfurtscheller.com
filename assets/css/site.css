@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/alegreya-400.ttf") format("truetype");
+  src: url("/fonts/alegreya-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/alegreya-700.ttf") format("truetype");
+  src: url("/fonts/alegreya-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/alegreya-italic-400.ttf") format("truetype");
+  src: url("/fonts/alegreya-italic-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/alegreya-italic-700.ttf") format("truetype");
+  src: url("/fonts/alegreya-italic-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url("/fonts/ibm-plex-sans.ttf") format("truetype");
+  src: url("/fonts/ibm-plex-sans.woff2") format("woff2");
 }
 
 :root {
@@ -679,6 +679,10 @@ dd {
   inset: 0;
   position: absolute;
   z-index: -2;
+}
+
+.photo-hero-media picture {
+  display: contents;
 }
 
 .photo-hero-media img {
@@ -2068,6 +2072,30 @@ input:focus-visible {
 
   .photo-hero {
     min-height: 520px;
+  }
+
+  .photo-hero-media img,
+  .photo-hero-caption {
+    animation: none;
+  }
+
+  .photo-hero-media img {
+    display: none;
+    transform: none;
+  }
+
+  .photo-hero-media > img:first-child {
+    display: block;
+    opacity: 1;
+  }
+
+  .photo-hero-caption {
+    display: none;
+  }
+
+  .photo-hero-caption:first-child {
+    display: block;
+    opacity: 1;
   }
 
   .photo-hero::before {

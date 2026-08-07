@@ -5,12 +5,29 @@
   <section class="photo-hero{{ with .Class }} {{ . }}{{ end }}" aria-labelledby="{{ $id }}">
     <div class="photo-hero-media" aria-hidden="true" style="--slide-count: {{ len $slides }};">
       {{ range $index, $slide := $slides }}
-        <img
-          src="{{ $slide.src }}"
-          alt=""
-          decoding="async"
-          style="--slide-index: {{ $index }}; object-position: {{ $slide.position | default "center center" }};"
-        >
+        {{ if eq $index 0 }}
+          <img
+            src="{{ $slide.src }}"
+            alt=""
+            width="1800"
+            height="1000"
+            decoding="async"
+            fetchpriority="high"
+            style="--slide-index: {{ $index }}; object-position: {{ $slide.position | default "center center" }};"
+          >
+        {{ else }}
+          <picture>
+            <source media="(min-width: 721px)" srcset="{{ $slide.src }}">
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              alt=""
+              width="1800"
+              height="1000"
+              decoding="async"
+              style="--slide-index: {{ $index }}; object-position: {{ $slide.position | default "center center" }};"
+            >
+          </picture>
+        {{ end }}
       {{ end }}
     </div>
     <div class="photo-hero-context" aria-hidden="true" style="--slide-count: {{ len $slides }};">
