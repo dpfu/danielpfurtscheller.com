@@ -990,14 +990,6 @@ dd {
   color: var(--blue);
 }
 
-.catalog-find-hint {
-  color: var(--muted);
-  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.76rem;
-  line-height: 1.35;
-  margin: 0.75rem 0 0;
-}
-
 .catalog-year-group {
   scroll-margin-top: 5.5rem;
 }
@@ -1318,14 +1310,6 @@ dd {
   font-weight: 700;
   line-height: 1.25;
   padding-inline: 0.2rem;
-}
-
-.citation-copy-hint {
-  color: var(--muted);
-  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.68rem;
-  line-height: 1.35;
-  margin: 0 0 0.65rem;
 }
 
 .citation-tabs {
