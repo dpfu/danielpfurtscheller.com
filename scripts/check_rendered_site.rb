@@ -100,6 +100,26 @@ html_files.each do |path|
   end
 end
 
+rss_path = File.join(PUBLIC_DIR, "publications", "index.xml")
+if File.file?(rss_path)
+  rss = File.read(rss_path, encoding: "UTF-8")
+  rss_items = rss.scan(/<item>(.*?)<\/item>/m)
+  expected_items = Dir[File.join(ROOT, "content", "publications", "*.md")]
+                   .count { |path| File.basename(path) != "_index.md" }
+  if rss_items.length != expected_items
+    errors << "#{relative_path(rss_path)}: expected #{expected_items} items, found #{rss_items.length}"
+  end
+  rss_items.each_with_index do |match, index|
+    item = match.first
+    if item.match?(/<description\s*\/>/) || item.match?(/<description>\s*<\/description>/)
+      errors << "#{relative_path(rss_path)}: item #{index + 1} has an empty description"
+    end
+  end
+  errors << "#{relative_path(rss_path)}: contains a local filesystem path" if rss.match?(%r{(?:file://|/(?:Users|home)/|[A-Za-z]:\\Users\\)}i)
+else
+  errors << "public/publications/index.xml: publication RSS feed is missing"
+end
+
 if errors.any?
   warn "Rendered-site check failed:"
   errors.uniq.each { |error| warn "- #{error}" }
