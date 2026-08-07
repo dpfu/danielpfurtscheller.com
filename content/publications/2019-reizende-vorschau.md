@@ -9,12 +9,12 @@ year: 2019
 display_type: Buchkapitel
 source: 'In: Schwender, Clemens; Brantner, Cornelia; Graubner, Camilla; von Gottberg,
   Joachim: zeigen – andeuten – verstecken: Bilder zwischen Verantwortung und Provokation.
-  Köln: Herbert von Halem, S. 121–142.'
+  Köln: Herbert von Halem, S. 121–143.'
 citation: 'Pfurtscheller, Daniel (2019): Reizende Vorschau. Thumbnail-Bilder als Teil
   multimodaler Verweisbausteine und kontaktorientierter Medienlogik zwischen Teasing
   und Clickbaiting. In: Schwender, Clemens; Brantner, Cornelia; Graubner, Camilla;
   von Gottberg, Joachim: zeigen – andeuten – verstecken: Bilder zwischen Verantwortung
-  und Provokation. Köln: Herbert von Halem, S. 121–142.'
+  und Provokation. Köln: Herbert von Halem, S. 121–143.'
 authors:
 - Pfurtscheller, Daniel
 links:
@@ -35,8 +35,9 @@ data_sources:
 citation_formats:
   apa7: Pfurtscheller, D. (2019). Reizende Vorschau. Thumbnail-Bilder als Teil multimodaler
     Verweisbausteine und kontaktorientierter Medienlogik zwischen Teasing und Clickbaiting.
-    In C. Schwender, C. Brantner, & J. von Gottberg (Eds.), Zeigen | andeuten | verstecken.
-    Bilder zwischen Verantwortung und Provokation (pp. 121–143). Halem.
+    In C. Schwender, C. Brantner, C. Graubner, & J. von Gottberg (Eds.), Zeigen |
+    andeuten | verstecken. Bilder zwischen Verantwortung und Provokation (pp. 121–143).
+    Halem.
   bibtex: "@incollection{Pfurtscheller2019b,\n\taddress = {Köln},\n\ttitle = {Reizende
     {Vorschau}. {Thumbnail}-{Bilder} als {Teil} multimodaler {Verweisbausteine} und
     kontaktorientierter {Medienlogik} zwischen {Teasing} und {Clickbaiting}},\n\tabstract
@@ -60,13 +61,13 @@ citation_formats:
     Clickbaiting abgelehnt.},\n\tbooktitle = {zeigen {\\textbar} andeuten {\\textbar}
     verstecken. {Bilder} zwischen {Verantwortung} und {Provokation}},\n\tpublisher
     = {Halem},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Schwender, Clemens
-    and Brantner, Cornelia and von Gottberg, Joachim},\n\tyear = {2019},\n\tpages
+    and Brantner, Cornelia and Graubner, Camilla and von Gottberg, Joachim},\n\tyear = {2019},\n\tpages
     = {121--143},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2019. Reizende Vorschau. Thumbnail-Bilder
     als Teil multimodaler Verweisbausteine und kontaktorientierter Medienlogik zwischen
-    Teasing und Clickbaiting. In Clemens Schwender, Cornelia Brantner & Joachim von
-    Gottberg (eds.), zeigen | andeuten | verstecken. Bilder zwischen Verantwortung
-    und Provokation, 121–143. Köln: Halem.'
+    Teasing und Clickbaiting. In Clemens Schwender, Cornelia Brantner, Camilla Graubner
+    & Joachim von Gottberg (eds.), zeigen | andeuten | verstecken. Bilder zwischen
+    Verantwortung und Provokation, 121–143. Köln: Halem.'
 abstract: Thumbnails sind Miniaturansichten, die in digitalen Medien als Navigationsbilder
   genutzt werden können, um Beiträge anzukündigen und Neugier zu wecken. Dieser Beitrag
   diskutiert die Verwendung von Thumbnail-Bildern im Rahmen multimodaler Verweisbausteine

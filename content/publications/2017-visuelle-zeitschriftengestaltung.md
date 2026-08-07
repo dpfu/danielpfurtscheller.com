@@ -13,7 +13,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Katalog
-  url: http://d-nb.info/1129274772
+  url: https://d-nb.info/1129274772
 open_access:
   status: closed
   source: 'Lokaler Bestand'

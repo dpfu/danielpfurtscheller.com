@@ -6,13 +6,13 @@ description: 'Pfurtscheller, Daniel (2025): In der Schnipselwerkstatt. Multimoda
 date: '2025-01-01'
 year: 2025
 display_type: Buchkapitel
-source: 'In: Fischer, Franziska; Meier-Vieracker, Simon; Niendorf, Lea: TikTok – Memefication
-  und Performance. Berlin, Heidelberg: J. B. Metzler (= Digitale Linguistik, 2), S.
-  67–91.'
+source: 'In: Fischer, Friederike; Meier-Vieracker, Simon; Niendorf, Lisa: TikTok –
+  Memefication und Performance: Interdisziplinäre Zugänge. Berlin, Heidelberg: J.
+  B. Metzler (= Digitale Linguistik, 2), S. 67–91.'
 citation: 'Pfurtscheller, Daniel (2025): In der Schnipselwerkstatt. Multimodale Videozitate,
-  Verwertungspraktiken und Reflexivität auf TikTok. In: Fischer, Franziska; Meier-Vieracker,
-  Simon; Niendorf, Lea: TikTok – Memefication und Performance. Berlin, Heidelberg:
-  J. B. Metzler (= Digitale Linguistik, 2), S. 67–91.'
+  Verwertungspraktiken und Reflexivität auf TikTok. In: Fischer, Friederike; Meier-Vieracker,
+  Simon; Niendorf, Lisa: TikTok – Memefication und Performance: Interdisziplinäre
+  Zugänge. Berlin, Heidelberg: J. B. Metzler (= Digitale Linguistik, 2), S. 67–91.'
 authors:
 - Pfurtscheller, Daniel
 links:
@@ -62,7 +62,7 @@ citation_formats:
     = {Springer},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Fischer, Friederike
     and Meier-Vieracker, Simon and Niendorf, Lisa},\n\tyear = {2025},\n\tkeywords
     = {Affordance, Duet, Intertextuality, Media chains, Media linguistics, Quotation
-    practices, Stitch},\n\tpages = {67--91},\n\tfile = {pfurtscheller-2025-in_der_schnipselwerkstatt._multimodale_videozitate,_verwertungspraktiken_und_reflexivität_auf_tiktok.pdf:/Users/daniel/papers/pfurtscheller-2025-in_der_schnipselwerkstatt._multimodale_videozitate,_verwertungspraktiken_und_reflexivität_auf_tiktok.pdf:application/pdf},\n}"
+    practices, Stitch},\n\tpages = {67--91},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2025. In der Schnipselwerkstatt.
     Multimodale Videozitate, Verwertungspraktiken und Reflexivität auf TikTok. In
     Friederike Fischer, Simon Meier-Vieracker & Lisa Niendorf (eds.), TikTok – Memefication

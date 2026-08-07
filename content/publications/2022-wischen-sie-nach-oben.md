@@ -43,7 +43,7 @@ citation_formats:
     = {Digitales {Erzählen} zwischen {Routinisierung} und {Automatisierung}.},\n\tpublisher
     = {Peter Lang},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Meier-Vieracker,
     Simon and Hauser, Stefan and Scharloth, Joachim},\n\tyear = {2022},\n\tpages =
-    {17--34},\n\tfile = {pfurtscheller-2022-„wischen_sie_nach_oben_für_die_ganze_geschichte.“_multimodales_erzählen_in_journalistischen_instagra.pdf:/Users/daniel/papers/pfurtscheller-2022-„wischen_sie_nach_oben_für_die_ganze_geschichte.“_multimodales_erzählen_in_journalistischen_instagra.pdf:application/pdf},\n}"
+    {17--34},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. „Wischen Sie nach oben
     für die ganze Geschichte.“ Multimodales Erzählen in journalistischen Instagram-Stories.
     In Simon Meier-Vieracker, Stefan Hauser & Joachim Scharloth (eds.), Digitales

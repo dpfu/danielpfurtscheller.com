@@ -43,11 +43,17 @@ citation_formats:
     = {57},\n\tissn = {0010-3497, 2198-3852},\n\turl = {https://www.nomos-elibrary.de/10.5771/0010-3497-2024-4-465/bildethik-praktisch-verantwortungsvoller-umgang-mit-personenbezogenem-bildmaterial-in-der-wissenschaft-jahrgang-57-2024-heft-4?page=1},\n\tdoi
     = {10.5771/0010-3497-2024-4-465},\n\tabstract = {Der Beitrag untersucht forschungsethische
     Herausforderungen im Umgang mit personenbezogenem Bildmaterial in der Wissenschaft.
-    Auf Basis einer Literaturrec…},\n\tlanguage = {de},\n\tnumber = {4},\n\turldate
+    Auf Basis einer Literaturrecherche und Analyse bestehender Ansätze sowie Anonymisierungsmethoden
+    wird die Notwendigkeit einer differenzierten Bildethik betont, insbesondere in neuen
+    Publikationskontexten wie Open Science. Der Beitrag entwickelt darauf basierend praxisnahe
+    Empfehlungen für einen verantwortungsvollen Umgang mit personenbezogenen Bildern.
+    Zentrales Ergebnis ist das interaktive Tool „EthicLens“, das Forschende bei der ethischen
+    Reflexion im Umgang mit personenbezogenen Bildern unterstützt und so die Integrität
+    und Transparenz wissenschaftlicher Arbeiten fördert.},\n\tlanguage = {de},\n\tnumber = {4},\n\turldate
     = {2024-12-16},\n\tjournal = {Communicatio Socialis (ComSoc)},\n\tpublisher =
     {Nomos Verlagsgesellschaft mbH \\& Co. KG},\n\tauthor = {Christ, Katharina and
     Lobinger, Katharina and Pfurtscheller, Daniel and Venema, Rebecca},\n\tmonth =
-    nov,\n\tyear = {2024},\n\tpages = {465--477},\n\tfile = {christ_lobinger_pfurtscheller-2024-bildethik_praktisch._verantwortungsvoller_umgang_mit_personenbezogenem_bildmaterial_in_der_wissensch.pdf:/Users/daniel/papers/christ_lobinger_pfurtscheller-2024-bildethik_praktisch._verantwortungsvoller_umgang_mit_personenbezogenem_bildmaterial_in_der_wissensch.pdf:application/pdf},\n}"
+    nov,\n\tyear = {2024},\n\tpages = {465--477},\n}"
   unified_style_linguistics: Christ, Katharina, Katharina Lobinger, Daniel Pfurtscheller
     & Rebecca Venema. 2024. Bildethik praktisch. Verantwortungsvoller Umgang mit personenbezogenem
     Bildmaterial in der Wissenschaft. Communicatio Socialis (ComSoc). Nomos Verlagsgesellschaft

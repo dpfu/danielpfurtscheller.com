@@ -17,7 +17,7 @@ authors:
 - Rizzolli, Michaela
 links:
 - label: Katalog
-  url: http://permalink.obvsg.at/AC11133144
+  url: https://permalink.obvsg.at/AC11133144
 - label: Quelle
   url: https://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429
 open_access:
@@ -39,7 +39,7 @@ citation_formats:
     = {Medienräume},\n\turl = {https://resolver.obvsg.at/urn:nbn:at:at-ubi:3-429},\n\tlanguage
     = {de},\n\turldate = {2022-05-20},\n\tpublisher = {Innsbruck University Press},\n\teditor
     = {Dander, Valentin and Gründhammer, Veronika and Ortner, Heike and Pfurtscheller,
-    Daniel and Rizzolli, Michaela},\n\tyear = {2013},\n\tfile = {Dander_et_al-2013-Medienräume.pdf:/Users/daniel/papers/Dander_et_al-2013-Medienräume.pdf:application/pdf},\n}"
+    Daniel and Rizzolli, Michaela},\n\tyear = {2013},\n}"
   unified_style_linguistics: 'Dander, Valentin, Veronika Gründhammer, Heike Ortner,
     Daniel Pfurtscheller & Michaela Rizzolli (eds.). 2013. Medienräume: Materialität
     und Regionalität (Edited volume series). Innsbruck: Innsbruck University Press.

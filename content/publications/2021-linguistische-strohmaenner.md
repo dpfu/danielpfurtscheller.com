@@ -51,7 +51,7 @@ citation_formats:
     = {10.1007/s11616-021-00677-w},\n\tlanguage = {de},\n\tnumber = {3},\n\turldate
     = {2022-05-20},\n\tjournal = {Publizistik},\n\tauthor = {Bucher, Hans-Jürgen and
     Kuhnhenn, Martha and Pfurtscheller, Daniel},\n\tmonth = nov,\n\tyear = {2021},\n\tpages
-    = {431--437},\n\tfile = {Bucher_et_al-2021-Linguistische_Strohmänner.pdf:/Users/daniel/papers/Bucher_et_al-2021-Linguistische_Strohmänner.pdf:application/pdf},\n}"
+    = {431--437},\n}"
   unified_style_linguistics: 'Bucher, Hans-Jürgen, Martha Kuhnhenn & Daniel Pfurtscheller.
     2021. Linguistische Strohmänner: Die Instrumentalisierung der Sprachwissenschaft
     in Rudolf Stöbers Kritik gendergerechter Sprache. Publizistik 66(3). 431–437.

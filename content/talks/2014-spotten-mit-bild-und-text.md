@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://www.uibk.ac.at/news/programm/a5-folder-germanistik-satire-ironie-parodie-04.pdf"
+    url: "https://www.uibk.ac.at/news/programm/a5-folder-germanistik-satire-ironie-parodie-04.pdf"
 ---

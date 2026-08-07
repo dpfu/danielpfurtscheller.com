@@ -58,8 +58,7 @@ citation_formats:
     for their own communicative purposes.},\n\tlanguage = {en},\n\turldate = {2024-10-31},\n\tbooktitle
     = {Media as {Procedures} of {Communication}},\n\tpublisher = {John Benjamins Publishing
     Company},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Luginbühl, Martin
-    and Schneider, Jan Georg},\n\tmonth = oct,\n\tyear = {2024},\n\tpages = {124--155},\n\tfile
-    = {pfurtscheller-2024-media_as_cookie_cutters_exploring_the_digital_mediality_of_news_on_instagram.pdf:/Users/daniel/papers/pfurtscheller-2024-media_as_cookie_cutters_exploring_the_digital_mediality_of_news_on_instagram.pdf:application/pdf},\n}"
+    and Schneider, Jan Georg},\n\tmonth = oct,\n\tyear = {2024},\n\tpages = {124--155},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2024. Media as cookie cutters:
     Exploring the digital mediality of news on Instagram. In Martin Luginbühl & Jan
     Georg Schneider (eds.), Media as Procedures of Communication, vol. 348, 124–155.

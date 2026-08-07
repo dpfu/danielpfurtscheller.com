@@ -27,7 +27,7 @@ data_sources:
 - Zotero PDF 4A72UMTX
 citation_formats:
   apa7: 'Pfurtscheller, D. (2022). Swipe Up! Multimodale Nachrichtenpräsentation in
-    journalistischen Instagram-Storys. In U. Autenrieth & C. Brandner (Eds.), It’s
+    journalistischen Instagram-Storys. In U. Autenrieth & C. Brantner (Eds.), It’s
     All About Video: Visuelle Kommunikation im Bann bewegter Bilder (pp. 208–228).
     Herbert von Halem.'
   bibtex: "@incollection{Pfurtscheller2022d,\n\taddress = {Köln},\n\ttitle = {Swipe
@@ -35,10 +35,10 @@ citation_formats:
     = {978-3-86962-604-8},\n\tlanguage = {de},\n\tbooktitle = {It's {All} {About}
     {Video}: {Visuelle} {Kommunikation} im {Bann} bewegter {Bilder}},\n\tpublisher
     = {Herbert von Halem},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Autenrieth,
-    Ulla and Brandner, Cornelia},\n\tmonth = jul,\n\tyear = {2022},\n\tkeywords =
-    {Social Science / Media Studies},\n\tpages = {208--228},\n\tfile = {pfurtscheller-2022-swipe_up!_multimodale_nachrichtenpräsentation_in_journalistischen_instagram-storys.pdf:/Users/daniel/papers/pfurtscheller-2022-swipe_up!_multimodale_nachrichtenpräsentation_in_journalistischen_instagram-storys.pdf:application/pdf},\n}"
+    Ulla and Brantner, Cornelia},\n\tmonth = jul,\n\tyear = {2022},\n\tkeywords =
+    {Social Science / Media Studies},\n\tpages = {208--228},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. Swipe Up! Multimodale Nachrichtenpräsentation
-    in journalistischen Instagram-Storys. In Ulla Autenrieth & Cornelia Brandner (eds.),
+    in journalistischen Instagram-Storys. In Ulla Autenrieth & Cornelia Brantner (eds.),
     It’s All About Video: Visuelle Kommunikation im Bann bewegter Bilder, 208–228.
     Köln: Herbert von Halem.'
 ---

@@ -17,8 +17,8 @@ make test
 ```
 
 The test target validates curated frontmatter, builds Hugo with warnings treated
-as failures, verifies that the generated site contains no JavaScript, and checks
-whitespace.
+as failures, verifies that the generated site contains no JavaScript, checks local
+links, assets, fragments, IDs, headings, and image alternatives, and checks whitespace.
 
 ## Deployment
 
@@ -54,7 +54,7 @@ handlers, `javascript:` URLs, and JavaScript assets.
 For publication enrichment, probe one local Zotero item before copying data into frontmatter:
 
 ```sh
-/Users/daniel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/zotero_publication_probe.py --query "Bildethik praktisch"
+python3 scripts/zotero_publication_probe.py --query "Bildethik praktisch"
 ```
 
 The probe checks item metadata, APA bibliography output, BibTeX, child attachments, Zotero indexed full text, and a local PDF-text fallback via `pypdf`.

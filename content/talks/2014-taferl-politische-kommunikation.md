@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://politkom.files.wordpress.com/2014/02/programmheftdgpuk2014.pdf"
+    url: "https://politkom.files.wordpress.com/2014/02/programmheftdgpuk2014.pdf"
 ---

@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://www.uibk.ac.at/brenner-archiv/home/links/aktuell/graduiertenkolloquium_mai2012.pdf"
+    url: "https://www.uibk.ac.at/brenner-archiv/home/links/aktuell/graduiertenkolloquium_mai2012.pdf"
 ---

@@ -13,7 +13,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Katalog
-  url: http://permalink.obvsg.at/AC12666644
+  url: https://permalink.obvsg.at/AC12666644
 open_access:
   status: closed
   source: 'Lokaler Bestand'

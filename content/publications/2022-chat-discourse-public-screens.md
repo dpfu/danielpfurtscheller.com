@@ -15,7 +15,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Volltext
-  url: http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-32070
+  url: https://resolver.obvsg.at/urn:nbn:at:at-ubi:3-32070
 - label: DOI
   url: https://doi.org/10.3389/fcomm.2022.1059131
 - label: Verlag
@@ -44,7 +44,7 @@ citation_formats:
     {Case} of the {Austrian} Ö{VP} {Corruption} {Affair}},\n\tvolume = {7},\n\tdoi
     = {10.3389/fcomm.2022.1059131},\n\tnumber = {1059131},\n\tjournal = {Frontiers
     in Communication},\n\tauthor = {Pfurtscheller, Daniel},\n\tyear = {2022},\n\tpages
-    = {1--9},\n\tfile = {Pfurtscheller-2022-From_Private_Phones_to_Public_Screens.pdf:/Users/daniel/papers/Pfurtscheller-2022-From_Private_Phones_to_Public_Screens2.pdf:application/pdf},\n}"
+    = {1--9},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. From Private Phones to
     Public Screens: Cross-Media Recontextualization of Chat Discourse in the Case
     of the Austrian ÖVP Corruption Affair. Frontiers in Communication 7(1059131).

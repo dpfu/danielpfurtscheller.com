@@ -9,17 +9,17 @@ date: '2016-01-01'
 year: 2016
 display_type: Buchkapitel
 source: 'In: Igl, Natalia; Menzel, Julia: Illustrierte Zeitschriften um 1900. Mediale
-  Eigenlogik, Multimodalität und Metaisierung. Bielefeld: Transcript, S. 75–105.'
+  Eigenlogik, Multimodalität und Metaisierung. Bielefeld: Transcript, S. 75–106.'
 citation: 'Pfurtscheller, Daniel (2016): Verteiltes Zeigen. Multimodalität in Illustrierten
   Zeitschriften um 1900 am Beispiel serieller Bildverwendung in der populären Wochenzeitschrift
   "Das interessante Blatt". In: Igl, Natalia; Menzel, Julia: Illustrierte Zeitschriften
   um 1900. Mediale Eigenlogik, Multimodalität und Metaisierung. Bielefeld: Transcript,
-  S. 75–105.'
+  S. 75–106.'
 authors:
 - Pfurtscheller, Daniel
 links:
 - label: Katalog
-  url: http://d-nb.info/1112217525/04
+  url: https://d-nb.info/1112217525/04
 - label: DOI
   url: https://doi.org/10.14361/9783839436592-004
 - label: Quelle
@@ -45,7 +45,7 @@ citation_formats:
     = {10.14361/9783839436592-004},\n\tlanguage = {de},\n\turldate = {2022-05-20},\n\tbooktitle
     = {Illustrierte {Zeitschriften} um 1900},\n\tpublisher = {transcript Verlag},\n\tauthor
     = {Pfurtscheller, Daniel},\n\teditor = {Igl, Natalia and Menzel, Julia},\n\tmonth
-    = sep,\n\tyear = {2016},\n\tpages = {75--106},\n\tfile = {Pfurtscheller-2016-Verteiltes_Zeigen.pdf:/Users/daniel/papers/Pfurtscheller-2016-Verteiltes_Zeigen.pdf:application/pdf},\n}"
+    = sep,\n\tyear = {2016},\n\tpages = {75--106},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2016. Verteiltes Zeigen: Multimodalität
     in Illustrierten Zeitschriften um 1900 am Beispiel serieller Bildverwendung in
     der populären Wochenzeitschrift Das interessante Blatt. In Natalia Igl & Julia

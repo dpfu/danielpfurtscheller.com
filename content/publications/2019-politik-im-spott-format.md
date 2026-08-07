@@ -7,11 +7,11 @@ year: 2019
 display_type: Buchkapitel
 source: 'In: Schicha, Christian: Wahlwerbespots zur Bundestagswahl 2017. Analysen
   und Anschlussdiskurse über parteipolitische Kurzfilme in Deutschland. Wiesbaden:
-  Springer VS, S. 509–588.'
+  Springer VS, S. 509–528.'
 citation: 'Brantner, Cornelia; Pfurtscheller, Daniel; Lobinger, Katharina (2019):
   Politik im Spot(t)-Format: Humor im österreichischen Wahlkampf 2017. In: Schicha,
   Christian: Wahlwerbespots zur Bundestagswahl 2017. Analysen und Anschlussdiskurse
-  über parteipolitische Kurzfilme in Deutschland. Wiesbaden: Springer VS, S. 509–588.'
+  über parteipolitische Kurzfilme in Deutschland. Wiesbaden: Springer VS, S. 509–528.'
 authors:
 - Brantner, Cornelia
 - Pfurtscheller, Daniel
@@ -22,7 +22,7 @@ links:
 - label: Verlag
   url: https://link.springer.com/chapter/10.1007/978-3-658-24405-7_26
 - label: Quelle
-  url: http://link.springer.com/10.1007/978-3-658-24405-7_26
+  url: https://link.springer.com/10.1007/978-3-658-24405-7_26
 doi: 10.1007/978-3-658-24405-7_26
 open_access:
   status: closed
@@ -39,7 +39,7 @@ citation_formats:
   bibtex: "@incollection{BrantnerEtAl2019,\n\taddress = {Wiesbaden},\n\ttitle = {Politik
     im {Spot}(t)-{Format}: {Humor} im österreichischen {Wahlkampf} 2017},\n\tisbn
     = {978-3-658-24404-0 978-3-658-24405-7},\n\tshorttitle = {Politik im {Spot}(t)-{Format}},\n\turl
-    = {http://link.springer.com/10.1007/978-3-658-24405-7_26},\n\tdoi = {10.1007/978-3-658-24405-7_26},\n\tlanguage
+    = {https://link.springer.com/10.1007/978-3-658-24405-7_26},\n\tdoi = {10.1007/978-3-658-24405-7_26},\n\tlanguage
     = {de},\n\turldate = {2020-04-05},\n\tbooktitle = {Wahlwerbespots zur {Bundestagswahl}
     2017},\n\tpublisher = {Springer Fachmedien Wiesbaden},\n\tauthor = {Brantner,
     Cornelia and Pfurtscheller, Daniel and Lobinger, Katharina},\n\teditor = {Schicha,

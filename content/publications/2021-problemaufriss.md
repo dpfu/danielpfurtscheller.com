@@ -40,7 +40,7 @@ citation_formats:
     {Gazette})},\n\tpublisher = {Universität Wien},\n\tauthor = {Bülow, Lars and Diehr,
     Anne and Pfurtscheller, Daniel and Thome, Sebastian},\n\teditor = {Bülow, Lars
     and Diehr, Anne and Pfurtscheller, Daniel and Thome, Sebastian},\n\tyear = {2021},\n\tpages
-    = {1--4},\n\tfile = {Bülow_et_al-2021-Problemaufriss.pdf:/Users/daniel/papers/Bülow_et_al-2021-Problemaufriss.pdf:application/pdf},\n}"
+    = {1--4},\n}"
   unified_style_linguistics: 'Bülow, Lars, Anne Diehr, Daniel Pfurtscheller & Sebastian
     Thome. 2021. Problemaufriss. In Lars Bülow, Anne Diehr, Daniel Pfurtscheller &
     Sebastian Thome (eds.), Corona-Diskurse in und über Österreich (Themenheft Wiener

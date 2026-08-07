@@ -1,13 +1,13 @@
 ---
-title: "„Erzählende Bilder\"? Eine theoretische Rekonzeption visueller Narrativität"
-description: "„Erzählende Bilder\"? Eine theoretische Rekonzeption visueller Narrativität. Narration und Argumentation. Gemeinsame Tagung der DGPuK-Fachgruppe Mediensprache/Mediendiskurse und der SGKM-Fachgruppe Medienlinguistik, 2012-02-16."
+title: "„Erzählende Bilder“? Eine theoretische Rekonzeption visueller Narrativität"
+description: "„Erzählende Bilder“? Eine theoretische Rekonzeption visueller Narrativität. Narration und Argumentation. Gemeinsame Tagung der DGPuK-Fachgruppe Mediensprache/Mediendiskurse und der SGKM-Fachgruppe Medienlinguistik, 2012-02-16."
 date: "2012-02-16"
 year: 2012
 category: "Präsentationen auf Kongressen, Tagungen o.Ä."
 entry_type: "Konferenzvortrag"
 event: "Narration und Argumentation. Gemeinsame Tagung der DGPuK-Fachgruppe Mediensprache/Mediendiskurse und der SGKM-Fachgruppe Medienlinguistik"
 place: "Winterthur"
-citation: "Vortragende/r: Pfurtscheller, Daniel: „Erzählende Bilder\"? Eine theoretische Rekonzeption visueller Narrativität. Narration und Argumentation. Gemeinsame Tagung der DGPuK-Fachgruppe Mediensprache/Mediendiskurse und der SGKM-Fachgruppe Medienlinguistik, Winterthur, 16.02.2012."
+citation: "Vortragende/r: Pfurtscheller, Daniel: „Erzählende Bilder“? Eine theoretische Rekonzeption visueller Narrativität. Narration und Argumentation. Gemeinsame Tagung der DGPuK-Fachgruppe Mediensprache/Mediendiskurse und der SGKM-Fachgruppe Medienlinguistik, Winterthur, 16.02.2012."
 speakers:
   - "Pfurtscheller, Daniel"
 links:

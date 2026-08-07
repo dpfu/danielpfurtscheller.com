@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://www.ifg.uni.wroc.pl/stacjonarne/konf/SpracheuBildWrzes2013/Tagungsprogramm_Sprache%20und%20Bild.pdf"
+    url: "https://www.ifg.uni.wroc.pl/stacjonarne/konf/SpracheuBildWrzes2013/Tagungsprogramm_Sprache%20und%20Bild.pdf"
 ---

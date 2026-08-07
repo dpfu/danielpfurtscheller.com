@@ -58,7 +58,7 @@ citation_formats:
     = {Transkription und {Annotation} gesprochener {Sprache} und multimodaler {Interaktion}},\n\tpublisher
     = {Narr},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Schwarze, Cordula
     and Grawunder, Sven},\n\tmonth = jan,\n\tyear = {2022},\n\tnote = {Publisher:
-    Gunter Narr Verlag},\n\tpages = {186--210},\n\tfile = {pfurtscheller-2022-medienlinguistisch_transkribieren._transkriptions-_und_annotationspraktiken_in_der_qualitativen_fors.pdf:/Users/daniel/papers/pfurtscheller-2022-medienlinguistisch_transkribieren._transkriptions-_und_annotationspraktiken_in_der_qualitativen_fors.pdf:application/pdf},\n}"
+    Gunter Narr Verlag},\n\tpages = {186--210},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. Medienlinguistisch transkribieren.
     Transkriptions- und Annotationspraktiken in der qualitativen Forschung zu digitaler
     Medienkommunikation. In Cordula Schwarze & Sven Grawunder (eds.), Transkription

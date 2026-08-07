@@ -61,7 +61,7 @@ citation_formats:
     {Empirische} {Perspektiven} auf {Metakommunikation}},\n\tpublisher = {Springer},\n\tauthor
     = {Pfurtscheller, Daniel},\n\teditor = {Busch, Florian and Droste, Pepe and Wessels,
     Elisa},\n\tyear = {2022},\n\tkeywords = {Multimodalität, Comebacks, Digitales
-    Zitieren, Kontern, Medienkommunikation},\n\tpages = {153--176},\n\tfile = {pfurtscheller-2022-„klasse_greta_gut_gekontert“._reflexive_zitierpraktiken_und_rekontextualisierung_von_‚schlagfertiger.pdf:/Users/daniel/papers/pfurtscheller-2022-„klasse_greta_gut_gekontert“._reflexive_zitierpraktiken_und_rekontextualisierung_von_‚schlagfertiger.pdf:application/pdf},\n}"
+    Zitieren, Kontern, Medienkommunikation},\n\tpages = {153--176},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. „Klasse Greta gut gekontert“.
     Reflexive Zitierpraktiken und Rekontextualisierung von ‚schlagfertiger‘ Social-Media-Interaktion.
     In Florian Busch, Pepe Droste & Elisa Wessels (eds.), Sprachreflexive Praktiken:

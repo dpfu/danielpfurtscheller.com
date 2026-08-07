@@ -1,21 +1,17 @@
 ---
 title: "»Ich bin seit Montag Zuhause in Quarantäne« – Zur Verbindung von Erzählen
-  und Argumentieren in Social-Media-Kommentaren zu politischen Reden. >> I have been
-  home in quarantine since Monday <<: Relating Storytelling and Argumentation in Social
-  Media Comments on Political Speeches"
+  und Argumentieren in Social-Media-Kommentaren zu politischen Reden"
 description: 'Michel, Sascha; Pfurtscheller, Daniel (2021): »Ich bin seit Montag Zuhause
   in Quarantäne« – Zur Verbindung von Erzählen und Argumentieren in Social-Media-Kommentaren
-  zu politischen Reden. >> I have been home in quarantine since Monday <<: Relating
-  Storytelling and Argumentation in Social Media Comments on Political Speeches.'
+  zu politischen Reden.'
 date: '2021-01-01'
 year: 2021
 display_type: Artikel
 source: 'In: Zeitschrift für Literaturwissenschaft und Linguistik 51/2, S. 255–279.'
 citation: 'Michel, Sascha; Pfurtscheller, Daniel (2021): »Ich bin seit Montag Zuhause
   in Quarantäne« – Zur Verbindung von Erzählen und Argumentieren in Social-Media-Kommentaren
-  zu politischen Reden. >> I have been home in quarantine since Monday <<: Relating
-  Storytelling and Argumentation in Social Media Comments on Political Speeches. In:
-  Zeitschrift für Literaturwissenschaft und Linguistik 51/2, S. 255–279.'
+  zu politischen Reden. In: Zeitschrift für Literaturwissenschaft und Linguistik
+  51/2, S. 255–279.'
 authors:
 - Michel, Sascha
 - Pfurtscheller, Daniel
@@ -25,9 +21,8 @@ links:
 - label: Quelle
   url: https://link.springer.com/10.1007/s41244-021-00199-y
 short_title: "»Ich bin seit Montag Zuhause in Quarantäne«"
-subtitle: 'Zur Verbindung von Erzählen und Argumentieren in Social-Media-Kommentaren
-  zu politischen Reden. >> I have been home in quarantine since Monday <<: Relating
-  Storytelling and Argumentation in Social Media Comments on Political Speeches'
+subtitle: Zur Verbindung von Erzählen und Argumentieren in Social-Media-Kommentaren
+  zu politischen Reden
 doi: 10.1007/s41244-021-00199-y
 open_access:
   status: hybrid
@@ -68,7 +63,7 @@ citation_formats:
     announced.},\n\tlanguage = {de},\n\tnumber = {2},\n\turldate = {2021-09-21},\n\tjournal
     = {Zeitschrift für Literaturwissenschaft und Linguistik},\n\tauthor = {Michel,
     Sascha and Pfurtscheller, Daniel},\n\tmonth = jun,\n\tyear = {2021},\n\tpages
-    = {255--279},\n\tfile = {Michel_Pfurtscheller-2021-»Ich_bin_seit_Montag_Zuhause_in_Quarantäne«_–_Zur_Verbindung_von_Erzählen_und.pdf:/Users/daniel/papers/Michel_Pfurtscheller-2021-»Ich_bin_seit_Montag_Zuhause_in_Quarantäne«_–_Zur_Verbindung_von_Erzählen_und.pdf:application/pdf},\n}"
+    = {255--279},\n}"
   unified_style_linguistics: Michel, Sascha & Daniel Pfurtscheller. 2021. »Ich bin
     seit Montag Zuhause in Quarantäne« – Zur Verbindung von Erzählen und Argumentieren
     in Social-Media-Kommentaren zu politischen Reden. Zeitschrift für Literaturwissenschaft

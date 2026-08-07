@@ -40,7 +40,7 @@ citation_formats:
     = {51},\n\tissn = {0449-5233},\n\turl = {https://www.ingentaconnect.com/content/10.3726/JA512_45},\n\tdoi
     = {10.3726/JA512_45},\n\tlanguage = {en},\n\tnumber = {2},\n\turldate = {2023-02-21},\n\tjournal
     = {Jahrbuch für Internationale Germanistik},\n\tauthor = {Pfurtscheller, Daniel},\n\tmonth
-    = jan,\n\tyear = {2019},\n\tpages = {45--62},\n\tfile = {Pfurtscheller-2019-Der_rote_Rahmen.pdf:/Users/daniel/papers/Pfurtscheller-2019-Der_rote_Rahmen.pdf:application/pdf},\n}"
+    = jan,\n\tyear = {2019},\n\tpages = {45--62},\n}"
   unified_style_linguistics: Pfurtscheller, Daniel. 2019. Der rote Rahmen. Beobachtungen
     zur Medienkultur des Nachrichtenmagazins entlang eines visuellen Musterhinweises.
     Jahrbuch für Internationale Germanistik 51(2). 45–62. https://doi.org/10.3726/JA512_45.

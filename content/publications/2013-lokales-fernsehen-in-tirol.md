@@ -17,7 +17,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Katalog
-  url: http://permalink.obvsg.at/AC11133144
+  url: https://permalink.obvsg.at/AC11133144
 open_access:
   status: closed
   source: 'Lokaler Bestand'
@@ -29,7 +29,7 @@ citation_formats:
   apa7: 'Dorner, C. & Pfurtscheller, D. (2013). Lokales Fernsehen in Tirol. Dander,
     Valentin; Gründhammer, Veronika; Ortner, Heike; Pfurtscheller, Daniel; Rizzolli,
     Michaela: Medienräume: Regionalität und Materialität. Innsbruck: innsbruck university
-    press (IUP) (= Edited Volume Series), S. 131–146. http://permalink.obvsg.at/AC11133144
+    press (IUP) (= Edited Volume Series), S. 131–146. https://permalink.obvsg.at/AC11133144
 
 '
   bibtex: |
@@ -38,10 +38,10 @@ citation_formats:
       author = {Dorner, Christiane and Pfurtscheller, Daniel},
       year = {2013},
       note = {Dander, Valentin; Gründhammer, Veronika; Ortner, Heike; Pfurtscheller, Daniel; Rizzolli, Michaela: Medienräume: Regionalität und Materialität. Innsbruck: innsbruck university press (IUP) (= Edited Volume Series), S. 131–146},
-      url = {http://permalink.obvsg.at/AC11133144}
+      url = {https://permalink.obvsg.at/AC11133144}
     }
   unified_style_linguistics: 'Dorner, Christiane, Pfurtscheller, Daniel. 2013. Lokales
     Fernsehen in Tirol. Dander, Valentin; Gründhammer, Veronika; Ortner, Heike; Pfurtscheller,
     Daniel; Rizzolli, Michaela: Medienräume: Regionalität und Materialität. Innsbruck:
-    innsbruck university press (IUP) (= Edited Volume Series), S. 131–146. http://permalink.obvsg.at/AC11133144'
+    innsbruck university press (IUP) (= Edited Volume Series), S. 131–146. https://permalink.obvsg.at/AC11133144'
 ---

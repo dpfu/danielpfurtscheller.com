@@ -20,7 +20,7 @@ authors:
 - Schröder, Thomas
 links:
 - label: Katalog
-  url: http://d-nb.info/1151335495
+  url: https://d-nb.info/1151335495
 open_access:
   status: closed
   source: 'Lokaler Bestand'
@@ -36,7 +36,7 @@ citation_formats:
     im medialen Wandel: Einführung und Aufbau des Sammelbandes. Blasch, Lisa; Pfurtscheller,
     Daniel; Schröder, Thomas: Schneller, bunter, leichter? Kommunikationsstile im
     medialen Wandel. Innsbruck: innsbruck university press (IUP) (= Innsbrucker Beiträge
-    zur Kulturwissenschaft. Germanistische Reihe, 88), S. 7–12. http://d-nb.info/1151335495
+    zur Kulturwissenschaft. Germanistische Reihe, 88), S. 7–12. https://d-nb.info/1151335495
 
 '
   bibtex: |
@@ -45,12 +45,12 @@ citation_formats:
       author = {Blasch, Lisa and Pfurtscheller, Daniel and Schröder, Thomas},
       year = {2018},
       note = {Blasch, Lisa; Pfurtscheller, Daniel; Schröder, Thomas: Schneller, bunter, leichter? Kommunikationsstile im medialen Wandel. Innsbruck: innsbruck university press (IUP) (= Innsbrucker Beiträge zur Kulturwissenschaft. Germanistische Reihe, 88), S. 7–12},
-      url = {http://d-nb.info/1151335495}
+      url = {https://d-nb.info/1151335495}
     }
   unified_style_linguistics: 'Blasch, Lisa, Pfurtscheller, Daniel, Schröder, Thomas.
     2018. Kommunikationsstile im medialen Wandel: Einführung und Aufbau des Sammelbandes.
     Blasch, Lisa; Pfurtscheller, Daniel; Schröder, Thomas: Schneller, bunter, leichter?
     Kommunikationsstile im medialen Wandel. Innsbruck: innsbruck university press
     (IUP) (= Innsbrucker Beiträge zur Kulturwissenschaft. Germanistische Reihe, 88),
-    S. 7–12. http://d-nb.info/1151335495'
+    S. 7–12. https://d-nb.info/1151335495'
 ---

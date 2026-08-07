@@ -2,9 +2,9 @@
 title: Alltägliche Medienkritik in der Social-Media-Interaktion auf Facebook. Zur
   Rekonstruktion medienkritischer Praktiken am Beispiel des Facebook-Accounts von
   Zeit im Bild (ZIB)
-description: 'Pfurtscheller, Daniel (2020): Alltägliche Medienkritik in der Social-Media-
-  Interaktion auf Facebook. Zur Rekonstruktion medienkritischer Praktiken am Beispiel
-  des Facebook-Accounts von Zeit im Bild (ZIB).'
+description: 'Pfurtscheller, Daniel (2020): Alltägliche Medienkritik in der
+  Social-Media-Interaktion auf Facebook. Zur Rekonstruktion medienkritischer Praktiken
+  am Beispiel des Facebook-Accounts von Zeit im Bild (ZIB).'
 date: '2020-01-01'
 year: 2020
 display_type: Buchkapitel
@@ -43,8 +43,7 @@ citation_formats:
     im {Bild}},\n\tisbn = {978-3-86962-446-4 978-3-86962-445-7},\n\tlanguage = {ger},\n\tbooktitle
     = {Medienkritik: zwischen ideologischer {Instrumentalisierung} und kritischer
     {Aufklärung}},\n\tpublisher = {Herbert von Halem Verlag},\n\tauthor = {Pfurtscheller,
-    Daniel},\n\teditor = {Bucher, Hans-Jürgen},\n\tyear = {2020},\n\tpages = {252--273},\n\tfile
-    = {Pfurtscheller-2020-Alltägliche_Medienkritik_in_der_Social-Media-_Interaktion_auf_Facebook.pdf:/Users/daniel/papers/Pfurtscheller-2020-Alltägliche_Medienkritik_in_der_Social-Media-_Interaktion_auf_Facebook.pdf:application/pdf},\n}"
+    Daniel},\n\teditor = {Bucher, Hans-Jürgen},\n\tyear = {2020},\n\tpages = {252--273},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2020. Alltägliche Medienkritik
     in der Social-Media-Interaktion auf Facebook. Zur Rekonstruktion medienkritischer
     Praktiken am Beispiel des Facebook-Accounts von Zeit im Bild. In Hans-Jürgen Bucher

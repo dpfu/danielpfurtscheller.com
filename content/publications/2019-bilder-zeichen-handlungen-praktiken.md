@@ -50,15 +50,13 @@ citation_formats:
     = {2020-04-02},\n\tbooktitle = {Handbuch {Visuelle} {Kommunikationsforschung}},\n\tpublisher
     = {Springer Fachmedien},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Lobinger,
     Katharina},\n\tyear = {2019},\n\tkeywords = {Bildkommunikation, Bildhandeln, Bildpragmatik,
-    Bildpraktiken, Zeichentheorie},\n\tpages = {23--43},\n\tfile = {pfurtscheller-2019-bilder_zwischen_zeichen,_handlungen_und_praktiken
-    1.pdf:/Users/daniel/papers/pfurtscheller-2019-bilder_zwischen_zeichen,_handlungen_und_praktiken
-    1.pdf:application/pdf},\n}"
+    Bildpraktiken, Zeichentheorie},\n\tpages = {23--43},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2019. Bilder zwischen Zeichen,
     Handlungen und Praktiken. In Katharina Lobinger (ed.), Handbuch Visuelle Kommunikationsforschung,
     23–43. Wiesbaden: Springer Fachmedien. https://doi.org/10.1007/978-3-658-06508-9_2.'
 abstract: Der Beitrag skizziert einen theoretischen Rahmen für die handlungsorientierte
   Betrachtung und die empirische Analyse visueller Kommunikation. Zuerst werden eine
-  Bestandsaufnahme handlungsorientierter Zugänge sowie zeichen-, handlungsund praxistheoretische
+  Bestandsaufnahme handlungsorientierter Zugänge sowie zeichen-, handlungs- und praxistheoretische
   Grundlagen im interdisziplinären Forschungsfeld vorgestellt. Die handlungsorientierte
   Betrachtung von Bildpraktiken wird anschließend am Beispiel bildbezogener Social-Media-Interaktionen
   auf Twitter veranschaulicht. Damit wird exemplarisch verdeutlicht, dass eine handlungsorientierte

@@ -17,7 +17,7 @@ authors:
 - Schröder, Thomas
 links:
 - label: Katalog
-  url: http://d-nb.info/1151335495
+  url: https://d-nb.info/1151335495
 open_access:
   status: closed
   source: 'Lokaler Bestand'
@@ -31,11 +31,11 @@ citation_formats:
     leichter. Kommunikationsstile im medialen Wandel. iup.
   bibtex: "@book{BlaschEtAl2018,\n\taddress = {Innsbruck},\n\tseries = {Innsbrucker
     {Beiträge} zur {Kulturwissenschaft}. {Germanistische} {Reihe}},\n\ttitle = {Schneller,
-    bunter, leichter. {Kommunikationsstile} im medialen {Wandel}},\n\tnumber = {89},\n\tpublisher
+    bunter, leichter. {Kommunikationsstile} im medialen {Wandel}},\n\tnumber = {88},\n\tpublisher
     = {iup},\n\teditor = {Blasch, Lisa and Pfurtscheller, Daniel and Schröder, Thomas},\n\tyear
     = {2018},\n}"
   unified_style_linguistics: 'Blasch, Lisa, Daniel Pfurtscheller & Thomas Schröder
     (eds.). 2018. Schneller, bunter, leichter. Kommunikationsstile im medialen Wandel
-    (Innsbrucker Beiträge Zur Kulturwissenschaft. Germanistische Reihe 89). Innsbruck:
+    (Innsbrucker Beiträge Zur Kulturwissenschaft. Germanistische Reihe 88). Innsbruck:
     iup.'
 ---

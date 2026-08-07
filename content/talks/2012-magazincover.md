@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://grupo.us.es/gfilalem/Programm.pdf"
+    url: "https://grupo.us.es/gfilalem/Programm.pdf"
 ---

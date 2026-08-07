@@ -12,5 +12,5 @@ speakers:
   - "Pfurtscheller, Daniel"
 links:
   - label: "Weblink"
-    url: "http://www.uibk.ac.at/news/has/abstracts_1.pdf"
+    url: "https://www.uibk.ac.at/news/has/abstracts_1.pdf"
 ---

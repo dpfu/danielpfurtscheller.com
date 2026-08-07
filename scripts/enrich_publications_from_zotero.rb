@@ -17,14 +17,14 @@ BASE_URL = ENV.fetch("ZOTERO_LOCAL_BASE_URL", "http://127.0.0.1:23119")
 API_HEADERS = { "Zotero-API-Version" => "3" }.freeze
 DEFAULT_CONTENT_DIR = "content/publications"
 DEFAULT_PROBE = "scripts/zotero_publication_probe.py"
-DEFAULT_PYTHON = "/Users/daniel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+DEFAULT_PYTHON = ENV.fetch("PYTHON", "python3")
 
 options = {
   apply: false,
   content_dir: DEFAULT_CONTENT_DIR,
   report: nil,
   probe: DEFAULT_PROBE,
-  python: File.executable?(DEFAULT_PYTHON) ? DEFAULT_PYTHON : "python3",
+  python: DEFAULT_PYTHON,
   pdf_pages: 4
 }
 
@@ -135,6 +135,20 @@ def clean_text(value)
        .gsub(/[ \t]+/, " ")
        .gsub(/\n{3,}/, "\n\n")
        .strip
+end
+
+def sanitize_bibtex(value)
+  skipping_file_field = false
+
+  value.to_s.lines.filter_map do |line|
+    skipping_file_field = true if line.match?(/^\s*file\s*=/i)
+    if skipping_file_field
+      skipping_file_field = false if line.match?(/},?\s*$/)
+      next
+    end
+
+    line
+  end.join.strip
 end
 
 def first_sentences(value, max_chars: 420, count: 2)
@@ -378,7 +392,8 @@ def update_publication(path, options)
     apa_text = strip_csl_html(item["bib"])
     usl_text = strip_csl_html(usl && usl["bib"])
     formats["apa7"] = apa_text if apa_text && !apa_text.empty?
-    formats["bibtex"] = bibtex.strip if bibtex && !bibtex.strip.empty?
+    clean_bibtex = sanitize_bibtex(bibtex)
+    formats["bibtex"] = clean_bibtex unless clean_bibtex.empty?
     formats["unified_style_linguistics"] = usl_text if usl_text && !usl_text.empty?
     if formats != data["citation_formats"]
       data["citation_formats"] = formats

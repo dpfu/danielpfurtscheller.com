@@ -1,18 +1,18 @@
 ---
 title: Das Magazincover. Eine multimodale Pressetextsorte im Vergleich
-description: 'Pfurtscheller, Daniel (2014): Das Magazincover. Eine multimodale Pressetextsorte
+description: 'Pfurtscheller, Daniel (2013): Das Magazincover. Eine multimodale Pressetextsorte
   im Vergleich.'
-date: '2014-01-01'
-year: 2014
+date: '2013-01-01'
+year: 2013
 display_type: Artikel
 source: 'In: Estudios Filológicos Alemanes 26 (2013), S. 375–386.'
-citation: 'Pfurtscheller, Daniel (2014): Das Magazincover. Eine multimodale Pressetextsorte
+citation: 'Pfurtscheller, Daniel (2013): Das Magazincover. Eine multimodale Pressetextsorte
   im Vergleich. In: Estudios Filológicos Alemanes 26 (2013), S. 375–386.'
 authors:
 - Pfurtscheller, Daniel
 links:
 - label: Material
-  url: http://dialnet.unirioja.es/servlet/articulo?codigo=4678397
+  url: https://dialnet.unirioja.es/servlet/articulo?codigo=4678397
 open_access:
   status: closed
   source: 'Lokaler Bestand'

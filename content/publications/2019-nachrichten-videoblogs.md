@@ -7,12 +7,12 @@ description: 'Pfurtscheller, Daniel (2019): Über Nachrichten reden, „aber har
 date: '2019-01-01'
 year: 2019
 display_type: Buchkapitel
-source: 'In: Hauser, Stefan; Luginbühl, Martin; Susanne Tienken: Mediale Emotionskulturen.
+source: 'In: Hauser, Stefan; Luginbühl, Martin; Tienken, Susanne: Mediale Emotionskulturen.
   Bern – Berlin – Bruxelles – Frankfurt a.M. – New York – Oxford – Wien: Peter Lang
   (= Sprache in Kommunikation und Medien, 12), S. 109–134.'
 citation: 'Pfurtscheller, Daniel (2019): Über Nachrichten reden, „aber hart!“. Emotionalisierung,
   multimodale Inszenierung und kommunikative Aneignung von Nachrichtentexten in Videoblogs
-  auf YouTube. In: Hauser, Stefan; Luginbühl, Martin; Susanne Tienken: Mediale Emotionskulturen.
+  auf YouTube. In: Hauser, Stefan; Luginbühl, Martin; Tienken, Susanne: Mediale Emotionskulturen.
   Bern – Berlin – Bruxelles – Frankfurt a.M. – New York – Oxford – Wien: Peter Lang
   (= Sprache in Kommunikation und Medien, 12), S. 109–134.'
 authors:
@@ -42,8 +42,7 @@ citation_formats:
     und kommunikative {Aneignung} von {Nachrichtentexten} in {Videoblogs} auf {YouTube}},\n\tisbn
     = {978-3-0343-3671-0},\n\turldate = {2020-03-18},\n\tbooktitle = {Mediale {Emotionskulturen}},\n\tpublisher
     = {Lang},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Hauser, Stefan and
-    Luginbühl, Martin and Tienken, Susanne},\n\tyear = {2019},\n\tpages = {109--134},\n\tfile
-    = {pfurtscheller-2019-über_nachrichten_reden,_„aber_hart!“_emotionalisierung,_multimodale_inszenierung_und_kommunikative_a.pdf:/Users/daniel/papers/pfurtscheller-2019-über_nachrichten_reden,_„aber_hart!“_emotionalisierung,_multimodale_inszenierung_und_kommunikative_a.pdf:application/pdf},\n}"
+    Luginbühl, Martin and Tienken, Susanne},\n\tyear = {2019},\n\tpages = {109--134},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2019. Über Nachrichten reden,
     „aber hart!“ Emotionalisierung, multimodale Inszenierung und kommunikative Aneignung
     von Nachrichtentexten in Videoblogs auf YouTube. In Stefan Hauser, Martin Luginbühl

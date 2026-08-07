@@ -33,8 +33,8 @@ citation_formats:
   bibtex: "@book{OrtnerEtAl2014,\n\taddress = {Innsbruck},\n\tseries = {Edited volume
     series},\n\ttitle = {Datenflut und {Informationskanäle}},\n\tpublisher = {Innsbruck
     University Press},\n\teditor = {Ortner, Heike and Pfurtscheller, Daniel and Rizzolli,
-    Michaela and Wiesinger, Andeas},\n\tyear = {2014},\n\tfile = {Ortner_et_al-2014-Datenflut_und_Informationskanäle.pdf:/Users/daniel/papers/Ortner_et_al-2014-Datenflut_und_Informationskanäle.pdf:application/pdf},\n}"
+    Michaela and Wiesinger, Andreas},\n\tyear = {2014},\n}"
   unified_style_linguistics: 'Ortner, Heike, Daniel Pfurtscheller, Michaela Rizzolli
-    & Andeas Wiesinger (eds.). 2014. Datenflut und Informationskanäle (Edited Volume
+    & Andreas Wiesinger (eds.). 2014. Datenflut und Informationskanäle (Edited Volume
     Series). Innsbruck: Innsbruck University Press.'
 ---

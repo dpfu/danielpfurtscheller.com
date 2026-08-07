@@ -39,7 +39,7 @@ citation_formats:
     {Gazette}},\n\ttitle = {Corona-{Diskurse} in und über Österreich ({Themenheft}
     {Wiener} {Linguistische} {Gazette})},\n\tvolume = {90},\n\turl = {https://wlg.univie.ac.at/fileadmin/user_upload/p_wlg/902021/wlg-90-2021.pdf},\n\tpublisher
     = {Universität Wien},\n\teditor = {Bülow, Lars and Diehr, Anne and Pfurtscheller,
-    Daniel and Thome, Sebastian},\n\tyear = {2021},\n\tfile = {Bülow_et_al-2021-Corona-Diskurse_in_und_über_Österreich_(Themenheft_Wiener_Linguistische_Gazette).pdf:/Users/daniel/papers/Bülow_et_al-2021-Corona-Diskurse_in_und_über_Österreich_(Themenheft_Wiener_Linguistische_Gazette).pdf:application/pdf},\n}"
+    Daniel and Thome, Sebastian},\n\tyear = {2021},\n}"
   unified_style_linguistics: 'Bülow, Lars, Anne Diehr, Daniel Pfurtscheller & Sebastian
     Thome (eds.). 2021. Corona-Diskurse in und über Österreich (Themenheft Wiener
     Linguistische Gazette) (Wiener Linguistische Gazette). Vol. 90. Wien: Universität

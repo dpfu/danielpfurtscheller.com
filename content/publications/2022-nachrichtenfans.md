@@ -18,7 +18,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Volltext
-  url: http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-32706
+  url: https://resolver.obvsg.at/urn:nbn:at:at-ubi:3-32706
 - label: DOI
   url: https://doi.org/10.3726/b19029
 - label: Verlag
@@ -49,8 +49,7 @@ citation_formats:
     {Fernsehnachrichten} auf {Twitter}},\n\tvolume = {68},\n\turl = {https://www.peterlang.com/document/1175486},\n\turldate
     = {2022-05-20},\n\tbooktitle = {Fankulturen und {Fankommunikation}},\n\tpublisher
     = {Peter Lang},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Hauser, Stefan
-    and Meier-Vieracker, Simon},\n\tyear = {2022},\n\tpages = {51--77},\n\tfile =
-    {Pfurtscheller-2022-Nachrichtenfans.pdf:/Users/daniel/papers/Pfurtscheller-2022-Nachrichtenfans.pdf:application/pdf},\n}"
+    and Meier-Vieracker, Simon},\n\tyear = {2022},\n\tpages = {51--77},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2022. Nachrichtenfans. Fankommunikation
     in der interaktiven Nachbearbeitung von österreichischen Fernsehnachrichten auf
     Twitter. In Stefan Hauser & Simon Meier-Vieracker (eds.), Fankulturen und Fankommunikation

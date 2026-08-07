@@ -17,10 +17,8 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Volltext
-  url: http://resolver.obvsg.at/urn:nbn:at:at-ubi:3-47764
+  url: https://resolver.obvsg.at/urn:nbn:at:at-ubi:3-47764
 - label: DOI
-  url: https://doi.org/10.1515/zgl-2024-2005
-- label: Verlag
   url: https://doi.org/10.1515/zgl-2024-2005
 short_title: Digitale Live-Öffentlichkeiten
 subtitle: 'Eine medienlinguistische Analyse von parlamentarischen Live-Tickern auf
@@ -69,7 +67,7 @@ citation_formats:
     configuration of live digital publics.},\n\tlanguage = {de},\n\tnumber = {1},\n\turldate
     = {2024-04-12},\n\tjournal = {Zeitschrift für germanistische Linguistik},\n\tpublisher
     = {De Gruyter},\n\tauthor = {Pfurtscheller, Daniel},\n\tmonth = apr,\n\tyear =
-    {2024},\n\tpages = {95--123},\n\tfile = {pfurtscheller-2024-digitale_live-öffentlichkeiten_eine_medienlinguistische_analyse_von_parlamentarischen_live-tickern.pdf:/Users/daniel/papers/pfurtscheller-2024-digitale_live-öffentlichkeiten_eine_medienlinguistische_analyse_von_parlamentarischen_live-tickern.pdf:application/pdf},\n}"
+    {2024},\n\tpages = {95--123},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2024. Digitale Live-Öffentlichkeiten:
     Eine medienlinguistische Analyse von parlamentarischen Live-Tickern auf DerStandard.at.
     Zeitschrift für germanistische Linguistik. De Gruyter 52(1). 95–123. https://doi.org/10.1515/zgl-2024-2005.'

@@ -45,8 +45,7 @@ citation_formats:
     {https://doi.org/10.1515/9783110679885-020},\n\tdoi = {10.1515/9783110679885-020},\n\turldate = {2020-03-14},\n\tbooktitle
     = {Deutsch in {Sozialen} {Medien}: {Interaktiv} – multimodal – vielfältig},\n\tpublisher
     = {De Gruyter},\n\tauthor = {Pfurtscheller, Daniel},\n\teditor = {Marx, Konstanze
-    and Lobin, Henning and Schmidt, Axel},\n\tyear = {2020},\n\tpages = {355--358},\n\tfile
-    = {Pfurtscheller-2020-Öffentlichen_Sprachgebrauch_auf_Facebook_untersuchenZugänge,_Probleme,_Erste.pdf:/Users/daniel/papers/Pfurtscheller-2020-Öffentlichen_Sprachgebrauch_auf_Facebook_untersuchenZugänge,_Probleme,_Erste.pdf:application/pdf},\n}"
+    and Lobin, Henning and Schmidt, Axel},\n\tyear = {2020},\n\tpages = {355--358},\n}"
   unified_style_linguistics: 'Pfurtscheller, Daniel. 2020. Öffentlichen Sprachgebrauch
     auf Facebook untersuchen: Zugänge, Probleme, Erste Hilfe. In Konstanze Marx, Henning
     Lobin & Axel Schmidt (eds.), Deutsch in Sozialen Medien: Interaktiv – multimodal

@@ -62,7 +62,7 @@ citation_formats:
     Cornelia and Venema, Rebecca and Marchiori, Elena},\n\teditor = {Lobinger, Katharina},\n\tyear
     = {2019},\n\tkeywords = {Augmented Reality, Bewegtbild, Big Data, Bildethik, Computer
     Vision, Forschungsethik, Sichtbarkeit, Virtual Reality, Visualisierung},\n\tpages
-    = {723--749},\n\tfile = {Lobinger_et_al-2019-Theoretische,_thematische,_forschungsethische_und_methodologische.pdf:/Users/daniel/papers/Lobinger_et_al-2019-Theoretische,_thematische,_forschungsethische_und_methodologische.pdf:application/pdf},\n}"
+    = {723--749},\n}"
   unified_style_linguistics: 'Lobinger, Katharina, Wolfgang Reißmann, Daniel Pfurtscheller,
     Cornelia Brantner, Rebecca Venema & Elena Marchiori. 2019. Theoretische, thematische,
     forschungsethische und methodologische Herausforderungen der Visuellen Kommunikationsforschung.

@@ -18,7 +18,7 @@ authors:
 - Pfurtscheller, Daniel
 links:
 - label: Katalog
-  url: http://d-nb.info/1112615164/04
+  url: https://d-nb.info/1112615164/04
 - label: DOI
   url: https://doi.org/10.5281/zenodo.1182565
 short_title: Scherzen mit Bild und Text
