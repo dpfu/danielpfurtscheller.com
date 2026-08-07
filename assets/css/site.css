@@ -1280,6 +1280,7 @@ dd {
 
 .publication-panel {
   border-top: 1px solid var(--soft);
+  min-width: 0;
   padding-top: 18px;
 }
 
@@ -1360,6 +1361,7 @@ dd {
 .citation-panel-content {
   display: none;
   flex-basis: 100%;
+  min-width: 0;
   order: 2;
   padding-top: 6px;
 }
@@ -1382,6 +1384,7 @@ dd {
   background: var(--terminal-bg);
   color: var(--terminal-ink);
   max-width: 100%;
+  overflow-wrap: anywhere;
   overflow-x: auto;
   padding: 0.75rem;
   white-space: pre-wrap;
