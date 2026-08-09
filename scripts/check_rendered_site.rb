@@ -131,6 +131,7 @@ if css_files.empty?
 else
   css = css_files.map { |path| File.read(path, encoding: "UTF-8") }.join
   errors << "public/css: webfonts must use WOFF2" unless css.include?(".woff2") && !css.include?(".ttf")
+  errors << "public/css: responsive images must preserve their aspect ratio" unless css.match?(/(?:\A|})img\{[^}]*height:auto/)
 end
 
 rss_path = File.join(PUBLIC_DIR, "publications", "index.xml")
