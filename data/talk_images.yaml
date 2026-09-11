@@ -1,4 +1,8 @@
 hero:
+  - src: "/img/talks/2026-monte-verita-zeitimbild.webp"
+    caption: "Monte Verità, Ascona 2026"
+    talk: "/talks/2026-nachrichtengenres-kurzvideoformat/"
+    position: "center center"
   - src: "/img/talks/2019-ids-mannheim-deutsch-soziale-medien.webp"
     caption: "IDS-Jahrestagung, Mannheim 2019"
     position: "100% center"
