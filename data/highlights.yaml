@@ -1,8 +1,4 @@
 working_papers:
-  - title: "Multimodality Research in Media Linguistics"
-    authors: "Daniel Pfurtscheller"
-    affiliation: "Universität Innsbruck"
-    note: "Erscheint in: „Applied Linguistics – Yesterday, Today and Tomorrow“, De Gruyter. Kapitel 29, Open Access (CC BY-NC-ND)."
   - title: "„Stop-and-Go“ in Reaction-Videos: multimodale Herstellung und Organisation digitaler Zeitlichkeit"
     authors: "Carolin Dix & Daniel Pfurtscheller"
     affiliation: "Universität Innsbruck"
@@ -19,3 +15,6 @@ upcoming_talks:
   - title: "Vibe-Coding für die visuelle Kommunikationsforschung: Very Personal Research Software für digitale Sortierverfahren"
     date: "19. November 2026"
     note: "Tagung der DGPuK-Fachgruppe Visuelle Kommunikation, Universität Klagenfurt · Panel 4 „Methoden und Triangulation“, 15:00–16:30 Uhr"
+  - title: "Ad-hoc-Werkzeuge für multimodale Sprachdaten: Sichten, Sortieren und Annotieren mit KI-Agenten"
+    date: "21. November 2026"
+    note: "Viertes Österreichisches Treffen zur Digitalen Linguistik (ÖLT 2026), Universität Salzburg · 15:00–15:30 Uhr"
