@@ -31,6 +31,9 @@ menus:
     - name: "Vorträge"
       pageRef: "/talks"
       weight: 20
+    - name: "Tools"
+      pageRef: "/tools"
+      weight: 25
     - name: "Über mich"
       url: "/#about"
       weight: 30

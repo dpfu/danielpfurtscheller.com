@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="wrap article">
+  <article class="wrap article"{{ with .Params.contentLanguage }} lang="{{ . }}"{{ end }}>
     <header class="article-header">
       <p class="eyebrow">{{ .Params.eyebrow | default (.Section | default "Seite") }}</p>
       <h1>{{ .Title }}</h1>
