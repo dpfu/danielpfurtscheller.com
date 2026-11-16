@@ -1825,6 +1825,7 @@ dd {
   margin-top: 0.45rem;
 }
 
+.about-footer a:not(.contact-link),
 .legal-footer a {
   color: var(--footer-ink);
   text-decoration-color: rgba(251, 247, 240, 0.45);
