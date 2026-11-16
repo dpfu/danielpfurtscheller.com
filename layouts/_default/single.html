@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <article class="wrap article"{{ with .Params.contentLanguage }} lang="{{ . }}"{{ end }}>
+  <article class="wrap article">
     <header class="article-header">
-      <p class="eyebrow">{{ .Params.eyebrow | default (.Section | default "Seite") }}</p>
+      {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
       <h1>{{ .Title }}</h1>
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
     </header>
