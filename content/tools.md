@@ -1,8 +1,18 @@
 ---
 title: "Research tools"
-description: "Ich schreibe manchmal kleine Tools, die mir meine eigenen Arbeitsabläufe erleichtern sollen."
+description: "Your research data stays in your browser. Desktop browsers work best."
+layout: tools
+tools:
+  - name: SortBoard
+    description: "Run and replay visual sorting sessions with research participants."
+    status: Pre-release
+    url: "https://dpfu.github.io/sortboard/"
+  - name: Folder Sort
+    description: "Explore an image collection on a board and export your sorting as a folder structure."
+    status: Research prototype
+    url: "https://dpfu.github.io/FolderSort/"
+  - name: VideoBoard
+    description: "Arrange, annotate and code video clips on a spatial board."
+    status: Experimental v0.0.2
+    url: "https://dpfu.github.io/video-board/"
 ---
-
-Seit ich [mit KI programmiere](https://simonwillison.net/2025/Mar/19/vibe-coding/), probiere ich öfter aus, ob sich aus einer Idee ein kleines Werkzeug machen lässt. Vieles davon sind noch erste Versuche. Schau dich gern auf GitHub um. Wenn du Fragen zu den Tools hast oder dir eine Zusammenarbeit vorstellen kannst, schreib mir gern [eine E-Mail](mailto:daniel.pfurtscheller@uibk.ac.at).
-
-[Mein GitHub-Profil](https://github.com/dpfu)
