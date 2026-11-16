@@ -32,7 +32,7 @@ menus:
       pageRef: "/talks"
       weight: 20
     - name: "Tools"
-      pageRef: "/tools"
+      url: "/tools/"
       weight: 25
     - name: "Über mich"
       url: "/#about"

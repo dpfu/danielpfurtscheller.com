@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Browser-based tools for visual sorting and qualitative video analysis.">
+  <meta name="author" content="Daniel Pfurtscheller">
+  <link rel="canonical" href="https://www.danielpfurtscheller.com/tools/">
+  <title>Research tools | Daniel Pfurtscheller</title>
+  <style>
+    body {
+      background: #17191c;
+      margin: 0;
+    }
+
+    #research-tools {
+      background: #17191c;
+      color: #f5f7f8;
+      color-scheme: dark;
+      font: 400 1rem/1.5 system-ui, sans-serif;
+      padding: clamp(2.75rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem);
+    }
+
+    #research-tools .tools-content {
+      margin-inline: auto;
+      max-width: 64rem;
+    }
+
+    #research-tools .tools-header {
+      margin-bottom: clamp(1.75rem, 5vw, 3rem);
+    }
+
+    #research-tools h1 {
+      font-size: clamp(2.75rem, 8vw, 6rem);
+      font-weight: 650;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      margin: 0 0 0.75rem;
+    }
+
+    #research-tools .tools-header p {
+      color: #c3c9d0;
+      font-size: 1.0625rem;
+      margin: 0;
+      max-width: 52ch;
+    }
+
+    #research-tools .tools-grid {
+      display: grid;
+      gap: 0.875rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #research-tools .tool-card {
+      background: #292b2e radial-gradient(circle at 8px 9px, #44464b 1px, transparent 1.8px) 0 0 / 48px 48px;
+      border: 1px solid #44464b;
+      border-radius: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: clamp(1rem, 2.8vw, 1.6rem);
+    }
+
+    #research-tools .tool-status {
+      align-self: flex-start;
+      background: #383b40;
+      border-radius: 0.3rem;
+      color: #e3e7ec;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      padding: 0.15rem 0.5rem;
+    }
+
+    #research-tools .tool-status-beta {
+      background: #344635;
+      color: #d6f2ce;
+    }
+
+    #research-tools h2 {
+      font-size: clamp(1.25rem, 2.8vw, 1.65rem);
+      font-weight: 650;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    #research-tools .tool-description {
+      color: #d4d8de;
+      font-size: 0.9375rem;
+      margin: 0.55rem 0 1.35rem;
+    }
+
+    #research-tools .tool-link {
+      align-items: center;
+      align-self: flex-start;
+      color: #b6e4f8;
+      display: inline-flex;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      gap: 0.4em;
+      margin-top: auto;
+      min-height: 2.75rem;
+      text-underline-offset: 0.22em;
+    }
+
+    #research-tools .tool-link:hover {
+      color: #e5f6fe;
+    }
+
+    #research-tools .tool-link:focus-visible {
+      outline: 2px solid #b6e4f8;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main id="research-tools">
+    <div class="tools-content">
+      <header class="tools-header">
+        <h1>Research tools</h1>
+        <p>Your research data stays in your browser. Desktop browsers work best.</p>
+      </header>
+
+      <ul class="tools-grid" role="list">
+        <li class="tool-card">
+          <p class="tool-status">Alpha</p>
+          <h2>SortBoard</h2>
+          <p class="tool-description">Run and replay visual sorting sessions with research participants.</p>
+          <a class="tool-link" href="https://dpfu.github.io/sortboard/">Try SortBoard <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="tool-card">
+          <p class="tool-status tool-status-beta">Beta</p>
+          <h2>Folder Sort</h2>
+          <p class="tool-description">Explore an image collection on a board and export your sorting as a folder structure.</p>
+          <a class="tool-link" href="https://dpfu.github.io/FolderSort/">Try Folder Sort <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="tool-card">
+          <p class="tool-status">Alpha</p>
+          <h2>VideoBoard</h2>
+          <p class="tool-description">Arrange, annotate and code video clips on a spatial board.</p>
+          <a class="tool-link" href="https://dpfu.github.io/video-board/">Try VideoBoard <span aria-hidden="true">↗</span></a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
