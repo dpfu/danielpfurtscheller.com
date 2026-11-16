@@ -36,9 +36,21 @@
     h2 { font-size: 1.3rem; }
     p { margin: 0.8rem 0 0; }
 
+    .title-block {
+      padding: clamp(1rem, 4vw, 1.5rem);
+      background: #dfe5f0;
+    }
+
     .subtitle {
       font-size: 1.18rem;
       margin-block: 0.5rem 1.25rem;
+    }
+
+    .subtitle mark {
+      padding-inline: 0.18em;
+      color: inherit;
+      background: #f8bf42;
+      font-weight: 650;
     }
 
     .conference, .note { color: #50545c; }
@@ -74,6 +86,7 @@
 
     @media print {
       main { max-width: none; padding: 0; }
+      .title-block { padding: 0; }
       header, .references li { break-inside: avoid; }
       h2 { break-after: avoid; }
     }
@@ -82,18 +95,19 @@
 <body>
   <main>
     <header>
-      <h1>Vibe Coding for Visual Communication Research</h1>
-      <p class="subtitle">Tailored Research Software for Digital Sorting Methods</p>
-      <p>
-        <strong>Daniel Pfurtscheller</strong> · University of Innsbruck<br>
-        <strong>Katharina Lobinger</strong> · USI <span lang="it">Università della Svizzera italiana</span><br>
-        <strong>T. J. Thomson</strong> · RMIT University
-      </p>
+      <div class="title-block">
+        <h1>Vibe Coding for Visual Communication Research</h1>
+        <p class="subtitle"><mark>Tailored</mark> Research Software for Digital Sorting Methods</p>
+        <p>
+          <strong>Daniel Pfurtscheller</strong> · University of Innsbruck<br>
+          <strong>Katharina Lobinger</strong> · USI <span lang="it">Università della Svizzera italiana</span><br>
+          <strong>T. J. Thomson</strong> · RMIT University
+        </p>
+      </div>
       <p class="conference">
         DGPuK Visual Communication Section Annual Conference<br>
         <a lang="de" href="https://conference3.aau.at/event/348/">25 Jahre Bilder im Fokus. Paradigmen, Praktiken und Perspektiven</a><br>
-        University of Klagenfurt · <time datetime="2026-11-19">19 November 2026</time><br>
-        <a href="https://www.aau.at/wp-content/uploads/2026/11/Programm_Zeitplan_Viskomm-2026.pdf#page=5">Panel 4 · <span lang="de">Methoden und Triangulation</span></a> · 15:00–16:30 · V.1.07
+        University of Klagenfurt · <time datetime="2026-11-19">19 November 2026</time>
       </p>
       <p><a href="mailto:Daniel.Pfurtscheller@uibk.ac.at">Daniel.Pfurtscheller@uibk.ac.at</a></p>
     </header>
